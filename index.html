@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dein Waller-Coach | Fange endlich regelmäßig große Welse</title>
+  <meta name="description" content="Lerne, wie du trotz wenig Zeit gezielt kapitale Welse fängst – ohne endloses Ausprobieren oder Frust am Wasser. Premium-Coaching mit 18 Jahren Profi-Erfahrung.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-logo">
+        <img src="images/logo.png" alt="Dein Waller-Coach Logo">
+      </a>
+      <div class="navbar-tagline">Das exklusive Premium-Coaching aus 18 Jahren Profi-Erfahrung.</div>
+      <div class="navbar-right">
+        <div class="navbar-links">
+          <a href="#testimonials">Ergebnisse</a>
+          <a href="#ueber">Über</a>
+          <a href="#ressourcen">Ressourcen</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <a href="termin-buchen.html" class="btn btn-green navbar-cta">Erstgespräch buchen</a>
+      </div>
+      <button class="menu-toggle" aria-label="Menü" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#testimonials" onclick="toggleMenu()">Ergebnisse</a>
+      <a href="#ueber" onclick="toggleMenu()">Über</a>
+      <a href="#ressourcen" onclick="toggleMenu()">Ressourcen</a>
+      <a href="#faq" onclick="toggleMenu()">FAQ</a>
+      <a href="termin-buchen.html" class="btn btn-green" style="text-align:center">Erstgespräch buchen</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <p class="subtitle" data-animate>FÜR WELSANGLER, DIE ENDLICH KONSTANT ERFOLG HABEN WOLLEN</p>
+      <h1 data-animate data-delay="1">Fange endlich regelmäßig große Welse – mit System statt Zufall.</h1>
+      <p class="hero-desc" data-animate data-delay="2">Lerne, wie du trotz wenig Zeit gezielt kapitale Welse fängst – ohne endloses Ausprobieren oder Frust am Wasser.</p>
+
+      <div class="hero-content">
+        <div class="hero-video" data-animate="fade-left" data-delay="3">
+          <iframe src="https://www.youtube.com/embed/94X6twEFiQM?autoplay=1&mute=1&loop=1&playlist=94X6twEFiQM&controls=1&rel=0" title="Wels Coaching Video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        <div class="hero-right" data-animate="fade-right" data-delay="4">
+          <div class="hero-checks">
+            <div class="hero-check">
+              <div class="check-icon">
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              Klarer Plan statt Chaos
+            </div>
+            <div class="hero-check">
+              <div class="check-icon">
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              Knacke deine Hausgewässer
+            </div>
+            <div class="hero-check">
+              <div class="check-icon">
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              Mehr Erfolg bei weniger Zeitaufwand
+            </div>
+          </div>
+          <a href="termin-buchen.html" class="btn btn-green btn-full">Kostenloses Erstgespräch sichern</a>
+          <p class="hero-social-proof">Bereits hunderten Anglern dabei geholfen, konstant große Welse zu fangen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAIN POINTS -->
+  <section class="pain-points section" id="ergebnisse">
+    <div class="container">
+      <h2 class="text-center" data-animate>Kommt dir das bekannt vor?</h2>
+      <div class="pain-grid">
+        <div class="pain-card" data-animate data-delay="1">
+          <div class="pain-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+          </div>
+          <span>Du bist oft am Wasser – aber die richtig großen Welse bleiben aus</span>
+        </div>
+        <div class="pain-card" data-animate data-delay="2">
+          <div class="pain-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1 4v6h6"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+          </div>
+          <span>Du hast schon vieles ausprobiert, aber nichts funktioniert dauerhaft</span>
+        </div>
+        <div class="pain-card" data-animate data-delay="3">
+          <div class="pain-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <span>Es gibt zu viele Meinungen und Methoden – dir fehlt ein klarer Weg</span>
+        </div>
+        <div class="row-2">
+          <div class="pain-card" data-animate data-delay="4">
+            <div class="pain-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <span>Deine Zeit ist begrenzt und du kannst nicht ständig testen</span>
+          </div>
+          <div class="pain-card" data-animate data-delay="5">
+            <div class="pain-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+            </div>
+            <span>Du willst endlich konstant Erfolg – nicht nur Glückstreffer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUTION / BENEFITS -->
+  <section class="section">
+    <div class="container">
+      <h2 class="text-center" data-animate>Der klare Weg zu deinem konstanten Fangerfolg</h2>
+      <p class="section-desc text-center" data-animate data-delay="1">Im Coaching zeige ich dir einen strukturierten, erprobten Ansatz, mit dem du genau verstehst, wann, wo und wie du große Welse fängst – angepasst an dein Gewässer und deine verfügbare Zeit.</p>
+      <div class="benefits-grid">
+        <div class="benefit-card" data-animate data-delay="1">
+          <div class="check-icon">
+            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h4>Individuelle Strategie für dein Gewässer</h4>
+        </div>
+        <div class="benefit-card" data-animate data-delay="2">
+          <div class="check-icon">
+            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h4>Klare Schritt-für-Schritt Anleitung</h4>
+        </div>
+        <div class="benefit-card" data-animate data-delay="3">
+          <div class="check-icon">
+            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h4>Fokus auf große Fische statt Zufallstreffer</h4>
+        </div>
+        <div class="benefit-card" data-animate data-delay="4">
+          <div class="check-icon">
+            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h4>Maximale Ergebnisse bei minimalem Zeitaufwand</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA DARK -->
+  <section class="cta-dark-section">
+    <div class="cta-dark-wrapper">
+      <div class="cta-dark-left" data-animate="fade-left">
+        <div class="cta-dark-photo-card">
+          <img src="images/benjamin-wels.jpg" alt="Benjamin Gründer mit kapitalem Wels">
+        </div>
+      </div>
+      <div class="cta-dark-right" data-animate="fade-right" data-delay="2">
+        <h2>Du willst endlich konstant Welse fangen, statt jedes Mal aufs Neue zu rätseln, was funktioniert?</h2>
+        <p>Dann lerne uns in einem unverbindlichen Erstgespräch kennen.</p>
+        <p class="cta-dark-label">Gemeinsam schauen wir uns an:</p>
+        <ul class="cta-dark-list">
+          <li>wo du aktuell stehst</li>
+          <li>welche Fehler dich ausbremsen</li>
+          <li>und wie du mit einem klaren Plan deine Zeit am Wasser endlich effektiv nutzt</li>
+        </ul>
+        <a href="termin-buchen.html" class="btn btn-green">Jetzt unverbindliches Erstgespräch buchen!</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section" id="testimonials">
+    <div class="container">
+      <h2 class="text-center" data-animate>Was meine Kunden sagen</h2>
+      <div class="testimonials-grid" data-animate>
+        <div class="testimonial-card">
+          <div class="testimonial-video">
+            <img src="https://images.unsplash.com/photo-1504309092620-4d0ec726efa4?w=400&q=80" alt="Kundenstimme 1">
+            <button class="play-btn" aria-label="Video abspielen">
+              <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+            </button>
+          </div>
+          <div class="testimonial-text-area">
+            <div class="testimonial-info">
+              <h4 class="testimonial-name">[Kundenname 1]</h4>
+              <p class="testimonial-location">[Hausgewässer]</p>
+            </div>
+            <div class="testimonial-quote">"Ich war jahrelang am Wasser und habe alles ausprobiert. Erst durch das Coaching habe ich verstanden, worauf es wirklich ankommt – und direkt meinen ersten großen Wels gefangen."</div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-video">
+            <img src="https://images.unsplash.com/photo-1504309092620-4d0ec726efa4?w=400&q=80" alt="Kundenstimme 2">
+            <button class="play-btn" aria-label="Video abspielen">
+              <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+            </button>
+          </div>
+          <div class="testimonial-text-area">
+            <div class="testimonial-info">
+              <h4 class="testimonial-name">[Kundenname 2]</h4>
+              <p class="testimonial-location">[Hausgewässer]</p>
+            </div>
+            <div class="testimonial-quote">"Endlich ein klarer Plan. Kein Rätselraten mehr – sondern gezieltes Angeln mit System."</div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-video">
+            <img src="https://images.unsplash.com/photo-1504309092620-4d0ec726efa4?w=400&q=80" alt="Kundenstimme 3">
+            <button class="play-btn" aria-label="Video abspielen">
+              <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+            </button>
+          </div>
+          <div class="testimonial-text-area">
+            <div class="testimonial-info">
+              <h4 class="testimonial-name">[Kundenname 3]</h4>
+              <p class="testimonial-location">[Hausgewässer]</p>
+            </div>
+            <div class="testimonial-quote">"Weniger Zeit am Wasser, aber deutlich bessere Ergebnisse. Genau das habe ich gebraucht."</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COACHING PROCESS -->
+  <section class="steps section-gray" id="ablauf">
+    <div class="container">
+      <h2 class="text-center" data-animate>So läuft dein Coaching ab</h2>
+      <div class="steps-container">
+        <div class="step" data-animate data-delay="1">
+          <div class="step-content">
+            <h3>Kostenloses Erstgespräch</h3>
+            <p>Wir analysieren deine aktuelle Situation und deine Ziele.</p>
+          </div>
+          <div class="step-number">1</div>
+          <div class="step-spacer"></div>
+        </div>
+        <div class="step" data-animate data-delay="2">
+          <div class="step-spacer"></div>
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>Individueller Plan</h3>
+            <p>Du bekommst eine klare Strategie für dein Gewässer.</p>
+          </div>
+        </div>
+        <div class="step" data-animate data-delay="3">
+          <div class="step-content">
+            <h3>Umsetzung & Ergebnisse</h3>
+            <p>Du setzt die Strategie um und erzielst messbare Erfolge.</p>
+          </div>
+          <div class="step-number">3</div>
+          <div class="step-spacer"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section about-section" id="ueber">
+    <div class="container">
+      <h2 class="text-center" data-animate>Über Benjamin Gründer</h2>
+      <div class="about-card" data-animate="scale" data-delay="1">
+        <div class="about-card-text">
+          <h3>Benjamin Gründer</h3>
+          <p class="about-role">Welsangler, Coach & Experte</p>
+          <p>Benjamin Gründer ist passionierter Welsangler mit <strong>18 Jahren Erfahrung als professioneller Guide</strong> an den verschiedensten Gewässern Deutschlands und Europas. Seine Mission ist es, Anglern dabei zu helfen, gezielt und konstant kapitale Welse zu fangen – ohne jahrelanges Herumprobieren.</p>
+          <p>Als <strong>Autor des tausendfach verkauften Bestsellers „Wallerangeln – Fänge planbar machen"</strong> hat er sein Wissen bereits erfolgreich weitergegeben. Er hat sich darauf spezialisiert, die wirklich wichtigen Erfolgsfaktoren beim Welsangeln herauszufiltern und in klare, sofort anwendbare Strategien zu übersetzen.</p>
+          <p>Seine Expertise geht über klassisches Guiding hinaus: Als <strong>Entwickler der Angelwetter-App</strong> kombiniert er technisches und analytisches Verständnis mit jahrzehntelanger Praxiserfahrung. Dabei arbeitet er persönlich mit jedem Kunden zusammen, um individuelle Lösungen für spezifische Gewässer und Zielsituationen zu entwickeln.</p>
+          <p>Seine Methode basiert auf erprobten Techniken aus 18 Jahren professionellem Guiding, die messbare Ergebnisse liefern. Benjamin entwickelt seine Strategien kontinuierlich weiter und testet neue Ansätze selbst am Wasser, bevor er sie an seine Kunden weitergibt.</p>
+        </div>
+        <div class="about-card-image">
+          <img src="images/benjamin-portrait.jpg" alt="Benjamin Gründer mit kapitalem Wels">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESOURCES -->
+  <section class="section-dark section" id="ressourcen">
+    <div class="container">
+      <h2 class="text-center" data-animate>Weitere Ressourcen für deinen Erfolg</h2>
+      <div class="resources-grid">
+        <div class="resource-card" data-animate data-delay="1">
+          <div class="resource-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2" fill="none" stroke="white" stroke-width="2"/><line x1="12" y1="19" x2="12" y2="23" stroke="white" stroke-width="2"/></svg>
+          </div>
+          <h3>Waller-Flüsterer</h3>
+          <p class="resource-sub">Der Welsangler-Podcast</p>
+          <p>Höre dir kostenlos wertvolle Tipps, Strategien und Erfahrungen rund ums Welsangeln an. Neue Folgen regelmäßig mit praxisnahen Insights direkt vom Wasser.</p>
+          <a href="https://open.spotify.com/show/5pQNnB6Xkw57KLVyMkm3Vy" target="_blank" rel="noopener" class="resource-link">Jetzt anhören <span class="arrow">→</span></a>
+        </div>
+        <div class="resource-card" data-animate data-delay="2">
+          <div class="resource-icon">
+            <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21" fill="white"/></svg>
+          </div>
+          <h3>YouTube Kanal</h3>
+          <p class="resource-sub">Crafty Fisherman</p>
+          <p>Praxisvideos, Tutorials und Live-Sessions vom Wasser. Lerne visuell durch echte Fang-Situationen und bewährte Techniken in Aktion.</p>
+          <a href="https://www.youtube.com/@CraftyFisherman_Official" target="_blank" rel="noopener" class="resource-link">Kanal besuchen <span class="arrow">→</span></a>
+        </div>
+        <div class="resource-card" data-animate data-delay="3">
+          <div class="resource-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="white" stroke-width="2"/><path d="M12 6v6l4 2" fill="none" stroke="white" stroke-width="2"/></svg>
+          </div>
+          <h3>Angelwetter</h3>
+          <p class="resource-sub">Dein perfekter Angelbegleiter</p>
+          <p>Die ultimative Angel-App mit detaillierten Wetterdaten, Mondphasen, Solunar-Zeiten und vielem mehr. Plane deine Sessions optimal und erhöhe deine Fangchancen.</p>
+          <a href="http://www.angelwetter.net" target="_blank" rel="noopener" class="resource-link">App entdecken <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GREEN CTA -->
+  <section class="section-green cta-green">
+    <div class="container">
+      <h2 data-animate>Überzeuge dich selbst – ganz unverbindlich</h2>
+      <p data-animate data-delay="1">In einem kostenlosen Gespräch schauen wir uns gemeinsam deine Situation an und zeigen dir, wie du gezielt große Welse fangen kannst.</p>
+      <a href="termin-buchen.html" class="btn btn-outline" data-animate="scale" data-delay="2">Jetzt kostenloses Erstgespräch buchen <span class="arrow">→</span></a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq section" id="faq">
+    <div class="container">
+      <h2 class="text-center" data-animate>Häufige Fragen</h2>
+      <div class="faq-list" data-animate data-delay="1">
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Wie viel Zeit muss ich investieren?
+            <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Das Coaching ist speziell für Angler mit wenig Zeit aufgebaut. Du lernst, effizienter zu angeln und bessere Ergebnisse zu erzielen.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Brauche ich Vorerfahrung?
+            <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Nein. Egal ob Einsteiger oder erfahrener Angler – du bekommst eine klare Struktur.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Funktioniert das an jedem Gewässer?
+            <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Ja, die Strategien werden individuell auf dein Gewässer angepasst.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Was kostet das Coaching?
+            <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Die Preise lassen sich nicht pauschal festlegen, da sie sich individuell nach deinen Zielen, deiner aktuellen Ausgangssituation und deinen persönlichen Wünschen richten. Auch die Dauer der Zusammenarbeit spielt dabei eine entscheidende Rolle.</p>
+            <p>Wenn du Interesse an einer Zusammenarbeit hast, kannst du dir ganz unkompliziert einen kostenlosen und unverbindlichen Termin buchen. In diesem Gespräch analysieren wir deine Situation und erstellen anschließend ein maßgeschneidertes Angebot für dich.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="section-dark final-cta">
+    <div class="container">
+      <h2 data-animate>Sichere dir jetzt deinen Platz</h2>
+      <p data-animate data-delay="1">Aufgrund hoher Nachfrage sind die Plätze begrenzt.</p>
+      <a href="termin-buchen.html" class="btn btn-green" data-animate="scale" data-delay="2">Jetzt Termin sichern <span class="arrow">→</span></a>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter" data-animate>
+    <div class="container text-center">
+      <h2>Kostenloser Newsletter für Wallerangler</h2>
+      <p class="newsletter-sub">Erhalte regelmäßig wertvolle Inhalte, Updates und Einblicke – direkt in dein Postfach.</p>
+      <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Danke für deine Anmeldung!');">
+        <div class="newsletter-inputs">
+          <input type="text" placeholder="Vorname" required class="newsletter-input">
+          <input type="email" placeholder="Deine E-Mail-Adresse..." required class="newsletter-input">
+        </div>
+        <button type="submit" class="newsletter-btn">Jetzt anmelden</button>
+      </form>
+      <p class="newsletter-cta-text">Schließe dich hunderten Welsanglern an</p>
+      <p class="newsletter-disclaimer">Double Opt-in: Du erhältst eine Bestätigungs-E-Mail, um deine Anmeldung zu verifizieren.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">
+        <img src="images/logo.png" alt="Dein Waller-Coach Logo">
+      </div>
+      <div class="footer-links">
+        <a href="rechtliches.html#impressum">Impressum</a>
+        <span>|</span>
+        <a href="rechtliches.html#datenschutz">Datenschutz</a>
+        <span>|</span>
+        <a href="rechtliches.html#haftung">Haftungsausschluss</a>
+        <span>|</span>
+        <a href="rechtliches.html#agb">AGB</a>
+      </div>
+      <p class="footer-disclaimer">This site is not a part of the Facebook TM website or Facebook TM Inc. Additionally, this site is NOT endorsed by Facebook TM in any way. FACEBOOK TM is a trademark of FACEBOOK TM.</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('active');
+    }
+
+    function toggleFaq(btn) {
+      const item = btn.parentElement;
+      const wasActive = item.classList.contains('active');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+      if (!wasActive) item.classList.add('active');
+    }
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Scroll animations with IntersectionObserver
+    const animatedElements = document.querySelectorAll('[data-animate]');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.15,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    animatedElements.forEach(el => observer.observe(el));
+
+  </script>
+
+</body>
+</html>
