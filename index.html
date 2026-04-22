@@ -51,7 +51,7 @@
 
       <div class="hero-content">
         <div class="hero-video" data-animate="fade-left" data-delay="3">
-          <iframe src="https://www.youtube.com/embed/94X6twEFiQM?autoplay=1&mute=1&loop=1&playlist=94X6twEFiQM&controls=1&rel=0" title="Wels Coaching Video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <iframe data-consent-src="https://www.youtube.com/embed/94X6twEFiQM?autoplay=1&mute=1&loop=1&playlist=94X6twEFiQM&controls=1&rel=0" data-consent="marketing" title="Wels Coaching Video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="background:#000"></iframe>
         </div>
         <div class="hero-right" data-animate="fade-right" data-delay="4">
           <div class="hero-checks">
@@ -416,11 +416,14 @@
         <a href="rechtliches.html#haftung">Haftungsausschluss</a>
         <span>|</span>
         <a href="rechtliches.html#agb">AGB</a>
+        <span>|</span>
+        <a href="#" onclick="event.preventDefault(); openCookieSettings();">Cookie-Einstellungen</a>
       </div>
       <p class="footer-disclaimer">This site is not a part of the Facebook TM website or Facebook TM Inc. Additionally, this site is NOT endorsed by Facebook TM in any way. FACEBOOK TM is a trademark of FACEBOOK TM.</p>
     </div>
   </footer>
 
+  <script src="cookie-consent.js"></script>
   <script>
     function toggleMenu() {
       document.getElementById('mobileMenu').classList.toggle('active');
