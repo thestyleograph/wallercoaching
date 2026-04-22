@@ -1266,10 +1266,8 @@ p { color: var(--gray-600); }
   background: var(--white);
   border: 1px solid var(--gray-200);
   border-radius: var(--radius);
-  min-height: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  min-height: 750px;
+  overflow: hidden;
 }
 
 .booking-arrow {
