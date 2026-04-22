@@ -1432,11 +1432,11 @@ p { color: var(--gray-600); }
   .cta-dark-wrapper {
     grid-template-columns: 1fr;
     min-height: auto;
-    padding: 40px 24px;
+    padding: 48px 28px;
   }
 
   .cta-dark-left {
-    padding: 0 0 40px 0;
+    padding: 0 0 32px 0;
     justify-content: center;
   }
 
@@ -1445,7 +1445,11 @@ p { color: var(--gray-600); }
   }
 
   .cta-dark-right {
-    padding: 40px 0 0 0;
+    padding: 32px 0 0 0;
+  }
+
+  .cta-dark-right h2 {
+    margin-bottom: 24px;
   }
 
   .testimonials-grid {
