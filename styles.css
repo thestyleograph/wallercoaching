@@ -1423,20 +1423,23 @@ p { color: var(--gray-600); }
     grid-template-columns: 1fr;
   }
 
+  .cta-dark-section {
+    min-height: auto;
+  }
+
   .cta-dark-section::after {
-    width: 100%;
-    top: 50%;
-    border-radius: 24px 24px 0 0;
+    display: none;
   }
 
   .cta-dark-wrapper {
     grid-template-columns: 1fr;
     min-height: auto;
-    padding: 48px 28px;
+    padding: 40px 24px 0;
+    gap: 0;
   }
 
   .cta-dark-left {
-    padding: 0 0 32px 0;
+    padding: 0 0 40px 0;
     justify-content: center;
   }
 
@@ -1445,11 +1448,11 @@ p { color: var(--gray-600); }
   }
 
   .cta-dark-right {
-    padding: 32px 0 0 0;
-  }
-
-  .cta-dark-right h2 {
-    margin-bottom: 24px;
+    background: var(--dark);
+    border-radius: 20px;
+    padding: 36px 28px 40px;
+    margin: 0 -24px;
+    width: calc(100% + 48px);
   }
 
   .testimonials-grid {
