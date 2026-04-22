@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seite nicht gefunden | Dein Waller-Coach</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    .notfound {
+      min-height: calc(100vh - 200px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 24px;
+    }
+    .notfound-code {
+      font-size: 7rem;
+      font-weight: 800;
+      color: #2D8C3C;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+    .notfound h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 12px;
+    }
+    .notfound p {
+      font-size: 1.05rem;
+      color: #6b7280;
+      max-width: 440px;
+      margin: 0 auto 32px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR (minimal) -->
+  <nav class="navbar" style="border-bottom:1px solid rgba(255,255,255,0.1)">
+    <div class="navbar-inner" style="justify-content:center">
+      <a href="/index.html" class="navbar-logo">
+        <img src="/images/logo.png" alt="Dein Waller-Coach Logo">
+      </a>
+    </div>
+  </nav>
+
+  <!-- 404 -->
+  <section class="notfound">
+    <div>
+      <div class="notfound-code">404</div>
+      <h1>Seite nicht gefunden</h1>
+      <p>Die Seite, die du suchst, existiert leider nicht oder wurde verschoben.</p>
+      <a href="/index.html" class="btn btn-green">Zurück zur Startseite</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">
+        <img src="/images/logo.png" alt="Dein Waller-Coach Logo">
+      </div>
+      <div class="footer-links">
+        <a href="/rechtliches.html#impressum">Impressum</a>
+        <span>|</span>
+        <a href="/rechtliches.html#datenschutz">Datenschutz</a>
+        <span>|</span>
+        <a href="/rechtliches.html#haftung">Haftungsausschluss</a>
+        <span>|</span>
+        <a href="/rechtliches.html#agb">AGB</a>
+        <span>|</span>
+        <a href="#" onclick="event.preventDefault(); openCookieSettings();">Cookie-Einstellungen</a>
+      </div>
+      <p class="footer-disclaimer">This site is not a part of the Facebook TM website or Facebook TM Inc. Additionally, this site is NOT endorsed by Facebook TM in any way. FACEBOOK TM is a trademark of FACEBOOK TM.</p>
+    </div>
+  </footer>
+
+  <script src="/cookie-consent.js"></script>
+</body>
+</html>
