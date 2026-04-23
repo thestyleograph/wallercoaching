@@ -357,10 +357,8 @@ p { color: var(--gray-600); }
 
 .hero-video {
   position: relative;
-  border-radius: var(--radius);
   overflow: hidden;
-  aspect-ratio: 16/10;
-  background: #000;
+  width: 100%;
 }
 
 .hero-video img {
