@@ -402,8 +402,7 @@
     <div class="container text-center">
       <h2>Kostenloser Newsletter für Wallerangler</h2>
       <p class="newsletter-sub">Erhalte regelmäßig wertvolle Inhalte, Updates und Einblicke – direkt in dein Postfach.</p>
-      <div id="newsletter-status" style="display:none;font-size:14px;text-align:center;border-radius:8px;padding:12px 16px;margin-bottom:16px;max-width:700px;margin-left:auto;margin-right:auto;"></div>
-      <form class="newsletter-form" id="newsletter-form">
+      <form class="newsletter-form" id="newsletter-form" method="POST" action="https://1a15b29e.sibforms.com/serve/MUIFAI7dIkGOzjIfvZ3ET3GGJSzOKiWB5yIu3MnWh0LWhEMZKzkTOjG0wIs985mm3Uywb9eXaSEgf0tfPVz6Gb1F5cxw96VCmTF1gFPi4dmlnclp4mMDnQuV09TcT3f_21ugMoNkZGXtqJOB-aDFzv_6vJMXo1rTVCPgdfaV21tqUyo46n9F2p0moEDO6wh-fSznYprwBhffv62xmg==" target="brevo-iframe">
         <div class="newsletter-inputs">
           <input type="text" name="VORNAME" placeholder="Vorname" required class="newsletter-input">
           <input type="email" name="EMAIL" placeholder="Deine E-Mail-Adresse..." required class="newsletter-input">
@@ -412,6 +411,7 @@
         <input type="text" name="email_address_check" value="" style="display:none!important;position:absolute;left:-9999px;">
         <input type="hidden" name="locale" value="de">
       </form>
+      <iframe name="brevo-iframe" style="display:none!important;width:0;height:0;border:0;"></iframe>
       <p class="newsletter-cta-text">Schließe dich hunderten Welsanglern an</p>
       <p class="newsletter-disclaimer">Double Opt-in: Du erhältst eine Bestätigungs-E-Mail, um deine Anmeldung zu verifizieren.</p>
     </div>
@@ -484,41 +484,20 @@
   <script>
     (function() {
       var form = document.getElementById('newsletter-form');
-      var statusEl = document.getElementById('newsletter-status');
       var submitBtn = document.getElementById('newsletter-submit-btn');
 
-      form.addEventListener('submit', function(e) {
-        e.preventDefault();
-
+      form.addEventListener('submit', function() {
         // Honeypot check
-        if (form.email_address_check.value) return;
+        if (form.email_address_check.value) { event.preventDefault(); return; }
 
-        var formData = new FormData(form);
+        // The form submits normally into the hidden iframe (target="brevo-iframe")
+        // We just change the button text and redirect after a short delay
         submitBtn.disabled = true;
         submitBtn.textContent = 'Wird gesendet...';
 
-        fetch('https://1a15b29e.sibforms.com/serve/MUIFAI7dIkGOzjIfvZ3ET3GGJSzOKiWB5yIu3MnWh0LWhEMZKzkTOjG0wIs985mm3Uywb9eXaSEgf0tfPVz6Gb1F5cxw96VCmTF1gFPi4dmlnclp4mMDnQuV09TcT3f_21ugMoNkZGXtqJOB-aDFzv_6vJMXo1rTVCPgdfaV21tqUyo46n9F2p0moEDO6wh-fSznYprwBhffv62xmg==', {
-          method: 'POST',
-          body: formData,
-          mode: 'no-cors'
-        }).then(function() {
-          // no-cors returns opaque response, so we assume success
-          statusEl.style.display = 'block';
-          statusEl.style.color = '#13ce66';
-          statusEl.style.background = 'rgba(19,206,102,0.15)';
-          statusEl.textContent = 'Deine Anmeldung war erfolgreich. Du wirst weitergeleitet...';
-          form.style.display = 'none';
-          setTimeout(function() {
-            window.location.href = '/fast-geschafft';
-          }, 1500);
-        }).catch(function() {
-          statusEl.style.display = 'block';
-          statusEl.style.color = '#ff4949';
-          statusEl.style.background = 'rgba(255,73,73,0.15)';
-          statusEl.textContent = 'Deine Anmeldung konnte nicht gespeichert werden. Bitte versuche es erneut.';
-          submitBtn.disabled = false;
-          submitBtn.textContent = 'Jetzt anmelden';
-        });
+        setTimeout(function() {
+          window.location.href = 'https://wallercoaching.de/fast-geschafft';
+        }, 2000);
       });
     })();
   </script>
