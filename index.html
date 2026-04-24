@@ -17,6 +17,12 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+  <style>
+    /* Hide Brevo default styling - keep our design */
+    .sib-form-message-panel { display: none; }
+    .input--hidden { display: none !important; }
+  </style>
 </head>
 <body>
 
@@ -402,12 +408,22 @@
     <div class="container text-center">
       <h2>Kostenloser Newsletter für Wallerangler</h2>
       <p class="newsletter-sub">Erhalte regelmäßig wertvolle Inhalte, Updates und Einblicke – direkt in dein Postfach.</p>
-      <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Danke für deine Anmeldung!');">
-        <div class="newsletter-inputs">
-          <input type="text" placeholder="Vorname" required class="newsletter-input">
-          <input type="email" placeholder="Deine E-Mail-Adresse..." required class="newsletter-input">
+      <form class="newsletter-form" id="sib-form" method="POST" action="https://1a15b29e.sibforms.com/serve/MUIFAI7dIkGOzjIfvZ3ET3GGJSzOKiWB5yIu3MnWh0LWhEMZKzkTOjG0wIs985mm3Uywb9eXaSEgf0tfPVz6Gb1F5cxw96VCmTF1gFPi4dmlnclp4mMDnQuV09TcT3f_21ugMoNkZGXtqJOB-aDFzv_6vJMXo1rTVCPgdfaV21tqUyo46n9F2p0moEDO6wh-fSznYprwBhffv62xmg==" data-type="subscription">
+        <div id="sib-form-container">
+          <div id="error-message" class="sib-form-message-panel" style="display:none;font-size:14px;text-align:center;color:#ff4949;background:rgba(255,73,73,0.1);border-radius:8px;padding:12px 16px;margin-bottom:16px;">
+            <span class="sib-form-message-panel__inner-text">Deine Anmeldung konnte nicht gespeichert werden. Bitte versuche es erneut.</span>
+          </div>
+          <div id="success-message" class="sib-form-message-panel" style="display:none;font-size:14px;text-align:center;color:#13ce66;background:rgba(19,206,102,0.1);border-radius:8px;padding:12px 16px;margin-bottom:16px;">
+            <span class="sib-form-message-panel__inner-text">Deine Anmeldung war erfolgreich.</span>
+          </div>
+          <div class="newsletter-inputs">
+            <input type="text" name="VORNAME" id="VORNAME" placeholder="Vorname" required autocomplete="off" data-required="true" class="newsletter-input">
+            <input type="email" name="EMAIL" id="EMAIL" placeholder="Deine E-Mail-Adresse..." required autocomplete="off" data-required="true" class="newsletter-input">
+          </div>
+          <button type="submit" class="newsletter-btn" form="sib-form">Jetzt anmelden</button>
+          <input type="text" name="email_address_check" value="" class="input--hidden" style="display:none!important;">
+          <input type="hidden" name="locale" value="de">
         </div>
-        <button type="submit" class="newsletter-btn">Jetzt anmelden</button>
       </form>
       <p class="newsletter-cta-text">Schließe dich hunderten Welsanglern an</p>
       <p class="newsletter-disclaimer">Double Opt-in: Du erhältst eine Bestätigungs-E-Mail, um deine Anmeldung zu verifizieren.</p>
@@ -475,6 +491,31 @@
 
     animatedElements.forEach(el => observer.observe(el));
 
+  </script>
+
+  <!-- Brevo Form Integration -->
+  <script>
+    window.REQUIRED_CODE_ERROR_MESSAGE = 'Wähle bitte einen Ländervorwahl aus.';
+    window.LOCALE = 'de';
+    window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "Die eingegebenen Informationen sind nicht gültig. Bitte überprüfe das Feldformat und versuche es erneut.";
+    window.REQUIRED_ERROR_MESSAGE = "Dieses Feld darf nicht leer sein. ";
+    window.GENERIC_INVALID_MESSAGE = "Die eingegebenen Informationen sind nicht gültig. Bitte überprüfe das Feldformat und versuche es erneut.";
+    var AUTOHIDE = Boolean(0);
+  </script>
+  <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+  <script>
+    // Redirect to /fast-geschafft after successful Brevo submission
+    (function() {
+      var checkSuccess = setInterval(function() {
+        var successMsg = document.getElementById('success-message');
+        if (successMsg && successMsg.style.display !== 'none' && successMsg.offsetParent !== null) {
+          clearInterval(checkSuccess);
+          setTimeout(function() {
+            window.location.href = '/fast-geschafft';
+          }, 1000);
+        }
+      }, 500);
+    })();
   </script>
 
 </body>
