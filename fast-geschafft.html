@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fast geschafft… | Dein Waller-Coach</title>
+  <meta name="description" content="Bitte bestätige deine E-Mail-Adresse, damit ich dir den Newsletter zusenden darf.">
+  <meta property="og:title" content="Fast geschafft… | Dein Waller-Coach">
+  <meta property="og:description" content="Bitte bestätige deine E-Mail-Adresse, damit ich dir den Newsletter zusenden darf.">
+  <meta property="og:image" content="https://www.wallercoaching.de/images/og-image.jpg">
+  <meta property="og:url" content="https://www.wallercoaching.de/fast-geschafft">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .doi-page {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0a2e12 0%, #143d1c 50%, #0d3316 100%);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 24px 80px;
+      text-align: center;
+    }
+
+    .doi-page::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -20%;
+      width: 60%;
+      height: 100%;
+      background: radial-gradient(circle, rgba(45,140,60,0.12) 0%, transparent 70%);
+    }
+
+    .doi-page::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      right: -10%;
+      width: 50%;
+      height: 80%;
+      background: radial-gradient(circle, rgba(45,140,60,0.08) 0%, transparent 70%);
+    }
+
+    .doi-content {
+      max-width: 600px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .doi-icon {
+      width: 80px;
+      height: 80px;
+      background: rgba(45, 140, 60, 0.15);
+      border: 2px solid rgba(45, 140, 60, 0.3);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 32px;
+    }
+
+    .doi-icon svg {
+      width: 36px;
+      height: 36px;
+      stroke: var(--green);
+      stroke-width: 2;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .doi-page h1 {
+      color: var(--white);
+      font-size: 2.4rem;
+      margin-bottom: 12px;
+    }
+
+    .doi-subtitle {
+      color: var(--green-light);
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    .doi-text {
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 40px;
+    }
+
+    .doi-hint-box {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(45, 140, 60, 0.25);
+      border-radius: 16px;
+      padding: 28px 32px;
+      text-align: left;
+      margin-bottom: 40px;
+    }
+
+    .doi-hint-title {
+      color: var(--white);
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 16px;
+    }
+
+    .doi-hint-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .doi-hint-list li {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.95rem;
+      line-height: 1.5;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .doi-hint-list li::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      min-width: 6px;
+      background: var(--green);
+      border-radius: 50%;
+      margin-top: 8px;
+    }
+
+    .doi-btn {
+      display: inline-block;
+      padding: 18px 48px;
+      background: var(--green);
+      color: var(--white);
+      font-size: 1.1rem;
+      font-weight: 700;
+      font-family: var(--font-main);
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+      margin-bottom: 20px;
+    }
+
+    .doi-btn:hover {
+      background: var(--green-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(45, 140, 60, 0.4);
+    }
+
+    .doi-disclaimer {
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 0.8rem;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 600px) {
+      .doi-page {
+        padding: 100px 20px 60px;
+      }
+
+      .doi-page h1 {
+        font-size: 1.8rem;
+      }
+
+      .doi-subtitle {
+        font-size: 1.05rem;
+      }
+
+      .doi-hint-box {
+        padding: 20px 24px;
+      }
+
+      .doi-icon {
+        width: 64px;
+        height: 64px;
+        margin-bottom: 24px;
+      }
+
+      .doi-icon svg {
+        width: 28px;
+        height: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-logo">
+        <img src="images/logo.png" alt="Dein Waller-Coach Logo">
+      </a>
+      <div class="navbar-tagline">Das exklusive Premium-Coaching aus 18 Jahren Profi-Erfahrung.</div>
+      <div class="navbar-right">
+        <div class="navbar-links">
+          <a href="index.html#testimonials">Ergebnisse</a>
+          <a href="index.html#ueber">Über</a>
+          <a href="index.html#ressourcen">Ressourcen</a>
+          <a href="index.html#faq">FAQ</a>
+        </div>
+        <a href="termin-buchen.html" class="btn btn-green navbar-cta">Erstgespräch buchen</a>
+      </div>
+      <button class="menu-toggle" aria-label="Menü" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html#testimonials" onclick="toggleMenu()">Ergebnisse</a>
+      <a href="index.html#ueber" onclick="toggleMenu()">Über</a>
+      <a href="index.html#ressourcen" onclick="toggleMenu()">Ressourcen</a>
+      <a href="index.html#faq" onclick="toggleMenu()">FAQ</a>
+      <a href="termin-buchen.html" class="btn btn-green" style="text-align:center">Erstgespräch buchen</a>
+    </div>
+  </nav>
+
+  <!-- DOI CONFIRMATION -->
+  <section class="doi-page">
+    <div class="doi-content">
+      <div class="doi-icon">
+        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      </div>
+
+      <h1>Fast geschafft…</h1>
+      <p class="doi-subtitle">Bitte bestätige noch deine E-Mail-Adresse.</p>
+      <p class="doi-text">Ich habe dir gerade eine E-Mail geschickt. Klicke dort auf den Bestätigungslink, damit ich dir den Newsletter zusenden darf.</p>
+
+      <div class="doi-hint-box">
+        <p class="doi-hint-title">Falls du die E-Mail nicht findest:</p>
+        <ul class="doi-hint-list">
+          <li>Schau im Spam-Ordner nach</li>
+          <li>Prüfe bei Gmail den Tab „Werbung" oder „Updates"</li>
+          <li>Warte 1–2 Minuten, manchmal dauert die Zustellung kurz</li>
+        </ul>
+      </div>
+
+      <a href="https://mail.google.com" target="_blank" rel="noopener" class="doi-btn">Zum Postfach wechseln</a>
+      <p class="doi-disclaimer">Du erhältst den Newsletter erst, nachdem du deine Anmeldung bestätigt hast.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">
+        <img src="images/logo.png" alt="Dein Waller-Coach Logo">
+      </div>
+      <div class="footer-links">
+        <a href="rechtliches.html#impressum">Impressum</a>
+        <span>|</span>
+        <a href="rechtliches.html#datenschutz">Datenschutz</a>
+        <span>|</span>
+        <a href="rechtliches.html#haftung">Haftungsausschluss</a>
+        <span>|</span>
+        <a href="rechtliches.html#agb">AGB</a>
+        <span>|</span>
+        <a href="#" onclick="event.preventDefault(); openCookieSettings();">Cookie-Einstellungen</a>
+      </div>
+      <p class="footer-disclaimer">This site is not a part of the Facebook TM website or Facebook TM Inc. Additionally, this site is NOT endorsed by Facebook TM in any way. FACEBOOK TM is a trademark of FACEBOOK TM.</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('is-open');
+      document.querySelector('.menu-toggle').classList.toggle('is-open');
+    }
+  </script>
+  <script src="cookie-consent.js"></script>
+</body>
+</html>
