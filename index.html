@@ -1,2477 +1,503 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zander Coaching – Sicher im Zanderangeln werden</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dein Waller-Coach | Fange endlich regelmäßig große Welse</title>
+  <meta name="description" content="Lerne, wie du trotz wenig Zeit gezielt kapitale Welse fängst – ohne endloses Ausprobieren oder Frust am Wasser. Premium-Coaching mit 18 Jahren Profi-Erfahrung.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Dein Waller-Coach | Fange endlich regelmäßig große Welse">
+  <meta property="og:description" content="Premium-Coaching aus 18 Jahren Profi-Erfahrung. Lerne, wie du gezielt kapitale Welse fängst – mit System statt Zufall.">
+  <meta property="og:image" content="https://www.wallercoaching.de/images/og-image.jpg">
+  <meta property="og:url" content="https://www.wallercoaching.de">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Dein Waller-Coach">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <!-- TrustBox script -->
-  <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
-  <!-- End TrustBox script -->
-  <style>
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    :root {
-      --accent: #FFB800;
-      --accent-foreground: #0a0a0a;
-      --bg-dark: #0a0a0a;
-      --bg-dark-card: rgba(255,255,255,0.05);
-      --text-muted: #9ca3af;
-      --text-gray: #666;
-      --border-light: rgba(255,255,255,0.1);
-      --green-trust: #00B67A;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      color: #0a0a0a;
-      background: #ffffff;
-      line-height: 1.5;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    /* ===================== HEADER ===================== */
-    .header {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: var(--bg-dark);
-      color: #fff;
-      border-bottom: 1px solid var(--border-light);
-    }
-
-    .header-inner {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 24px;
-      height: 80px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .logo svg {
-      width: 32px;
-      height: 32px;
-      color: var(--accent);
-    }
-
-    .logo span {
-      font-weight: 700;
-      font-size: 20px;
-      letter-spacing: 0.02em;
-    }
-
-    .nav {
-      display: none;
-      align-items: center;
-      gap: 32px;
-    }
-
-    .nav a {
-      font-size: 14px;
-      color: #fff;
-      transition: color 0.2s;
-    }
-
-    .nav a:hover {
-      color: var(--accent);
-    }
-
-    .header-cta {
-      padding: 12px 24px;
-      background: transparent;
-      border: 2px solid var(--accent);
-      color: var(--accent);
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 14px;
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-
-    .header-cta:hover {
-      background: var(--accent);
-      color: var(--accent-foreground);
-    }
-
-    @media (min-width: 768px) {
-      .nav { display: flex; }
-    }
-
-    /* ===================== HERO ===================== */
-    .hero {
-      position: relative;
-      min-height: 90vh;
-      display: flex;
-      align-items: center;
-      background: linear-gradient(to bottom, #f9fafb, #ffffff);
-      overflow: hidden;
-    }
-    .hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: url('hero-bg.jpg') center center / cover no-repeat;
-      opacity: 0.08;
-      z-index: 1;
-    }
-
-    .hero-inner {
-      position: relative;
-      z-index: 10;
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 48px 24px;
-      width: 100%;
-    }
-
-    .hero-text {
-      text-align: center;
-      margin-bottom: 32px;
-    }
-
-    .hero-eyebrow {
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: #6b7280;
-      margin-bottom: 12px;
-      font-weight: 600;
-    }
-
-    .hero-headline {
-      font-size: clamp(32px, 5vw, 60px);
-      font-weight: 700;
-      line-height: 1.1;
-      color: #0a0a0a;
-      margin-bottom: 12px;
-      white-space: nowrap;
-    }
-
-    .hero-subline {
-      font-size: clamp(17px, 2vw, 21px);
-      font-weight: 500;
-      color: #374151;
-      max-width: 820px;
-      margin: 0 auto 40px;
-      line-height: 1.6;
-    }
-
-    .hero-grid {
-      display: grid;
-      gap: 32px;
-      max-width: 1100px;
-      margin: 0 auto 48px;
-    }
-
-    @media (min-width: 1024px) {
-      .hero-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    .video-placeholder {
-      aspect-ratio: 16 / 9;
-      background: #111827;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .play-btn {
-      width: 80px;
-      height: 80px;
-      background: rgba(255,184,0,0.2);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .play-btn::after {
-      content: '';
-      width: 0;
-      height: 0;
-      border-left: 16px solid var(--accent);
-      border-top: 12px solid transparent;
-      border-bottom: 12px solid transparent;
-      margin-left: 4px;
-    }
-
-    .hero-benefits {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .benefits-list {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-    }
-
-    .benefit-item {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .benefit-item svg {
-      width: 28px;
-      height: 28px;
-      color: var(--accent);
-      flex-shrink: 0;
-    }
-
-    .benefit-item span {
-      font-size: 18px;
-      font-weight: 600;
-      color: #0a0a0a;
-    }
-
-    .hero-cta-wrap {
-      margin-top: 40px;
-    }
-
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      padding: 16px 32px;
-      background: var(--accent);
-      color: var(--accent-foreground);
-      border-radius: 10px;
-      font-weight: 700;
-      font-size: 16px;
-      border: none;
-      cursor: pointer;
-      box-shadow: 0 10px 25px rgba(255,184,0,0.3);
-      transition: background 0.2s;
-    }
-
-    .btn-primary:hover {
-      background: #e6a600;
-    }
-
-    .hero-subtext {
-      font-size: 12px;
-      color: #6b7280;
-      text-align: center;
-      margin-top: 8px;
-    }
-
-    .bekannt-aus {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      gap: 24px;
-    }
-
-    .bekannt-label {
-      font-size: 14px;
-      font-weight: 500;
-      color: #374151;
-      font-style: italic;
-    }
-
-    .bekannt-logo {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .bekannt-logo img {
-      height: 50px;
-      width: auto;
-      object-fit: contain;
-      border-radius: 6px;
-    }
-
-    .trustpilot-badge {
-      background: #fff;
-      padding: 12px 16px;
-      border-radius: 6px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-      border: 1px solid #e5e7eb;
-      text-align: center;
-    }
-
-    .trustpilot-badge .stars {
-      color: var(--green-trust);
-      font-weight: 700;
-      font-size: 20px;
-    }
-
-    .trustpilot-badge .score {
-      font-size: 12px;
-      color: #6b7280;
-    }
-
-    /* ===================== PROBLEM SECTION ===================== */
-    .problem-section {
-      padding: 80px 0;
-      background: #ffffff;
-      color: #0a0a0a;
-    }
-
-    .problem-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 24px;
-      text-align: center;
-      margin-bottom: 64px;
-    }
-
-    .section-badge {
-      display: inline-block;
-      background: rgba(255,184,0,0.15);
-      border: 1px solid rgba(255,184,0,0.3);
-      border-radius: 8px;
-      padding: 8px 16px;
-      margin-bottom: 24px;
-    }
-
-    .section-badge p {
-      color: var(--accent);
-      font-weight: 600;
-      font-size: 14px;
-    }
-
-    .problem-headline {
-      font-size: clamp(28px, 4vw, 48px);
-      font-weight: 700;
-      margin-bottom: 16px;
-      color: #0a0a0a;
-    }
-
-    .problem-subline {
-      color: #6b7280;
-      font-size: 18px;
-      margin-bottom: 48px;
-    }
-
-    .problem-cards {
-      display: grid;
-      gap: 24px;
-    }
-
-    @media (min-width: 768px) {
-      .problem-cards {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    .problem-card {
-      padding: 24px;
-      background: #f9fafb;
-      border-radius: 12px;
-      border: 1px solid #e5e7eb;
-      text-align: left;
-    }
-
-    .problem-card-icon {
-      width: 48px;
-      height: 48px;
-      background: rgba(255,184,0,0.15);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 16px;
-    }
-
-    .problem-card-icon svg {
-      width: 24px;
-      height: 24px;
-      color: var(--accent);
-    }
-
-    .problem-card h3 {
-      font-size: 17px;
-      font-weight: 700;
-      margin-bottom: 12px;
-      color: #0a0a0a;
-    }
-
-    .problem-card p {
-      color: #6b7280;
-      font-size: 14px;
-      line-height: 1.6;
-    }
-
-    /* Es ist nicht deine Schuld */
-    .schuld-section {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    .schuld-grid {
-      display: grid;
-      gap: 48px;
-      align-items: center;
-    }
-
-    @media (min-width: 1024px) {
-      .schuld-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    .schuld-callout {
-      background: #f9fafb;
-      border-left: 4px solid var(--accent);
-      padding: 24px;
-      border-radius: 8px;
-    }
-
-    .schuld-callout .bold-title {
-      font-weight: 700;
-      font-size: 20px;
-      color: #0a0a0a;
-      margin-bottom: 16px;
-    }
-
-    .schuld-callout p {
-      color: #374151;
-      line-height: 1.7;
-      margin-bottom: 12px;
-    }
-
-    .schuld-callout .italic {
-      font-style: italic;
-    }
-
-    .schuld-bullets {
-      padding-left: 16px;
-      border-left: 2px solid #d1d5db;
-      margin: 16px 0;
-    }
-
-    .schuld-bullets p {
-      display: flex;
-      align-items: flex-start;
-      gap: 8px;
-      margin-bottom: 4px;
-    }
-
-    .schuld-bullets .dot {
-      color: var(--accent);
-      margin-top: 4px;
-    }
-
-    .schuld-divider {
-      padding-top: 16px;
-      border-top: 2px solid rgba(255,184,0,0.4);
-      margin-top: 16px;
-    }
-
-    .schuld-divider .accent-text {
-      color: var(--accent);
-      font-weight: 600;
-    }
-
-    .schuld-divider p {
-      color: #374151;
-    }
-
-    .schuld-image {
-      position: relative;
-    }
-
-    .schuld-image img {
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-    }
-
-    .schuld-image .caption {
-      margin-top: 16px;
-      text-align: center;
-      font-size: 14px;
-      color: #6b7280;
-      font-style: italic;
-    }
-
-    .schuld-cta {
-      margin-top: 24px;
-    }
-
-    .btn-primary-dark {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 16px 32px;
-      background: var(--accent);
-      color: var(--accent-foreground);
-      border-radius: 10px;
-      font-weight: 700;
-      font-size: 16px;
-      border: none;
-      cursor: pointer;
-      box-shadow: 0 10px 25px rgba(255,184,0,0.3);
-      transition: background 0.2s;
-    }
-
-    .btn-primary-dark:hover {
-      background: #e6a600;
-    }
-
-    /* ===================== ZANDER STRATEGIE (provided code) ===================== */
-    .process-section {
-      width: 100%;
-      padding: 80px 24px 100px;
-      background: #050807;
-      overflow: hidden;
-    }
-    .process-container {
-      max-width: 1180px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    .eyebrow {
-      color: #9ca3af;
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      margin-bottom: 14px;
-    }
-    .headline {
-      color: #ffffff;
-      font-size: clamp(42px, 6vw, 82px);
-      line-height: 0.95;
-      font-weight: 900;
-      letter-spacing: -0.04em;
-      text-transform: uppercase;
-      margin-bottom: 20px;
-    }
-    .subline {
-      max-width: 760px;
-      margin: 0 auto;
-      color: #9ca3af;
-      font-size: 18px;
-      line-height: 1.55;
-      font-weight: 600;
-    }
-    .system-graphic {
-      position: relative;
-      width: min(100%, 1060px);
-      min-height: 680px;
-      margin: 70px auto 0;
-    }
-    .z-connector {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 0;
-      pointer-events: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .z-connector svg {
-      width: 46%;
-      height: auto;
-      opacity: 0.22;
-    }
-    .z-connector path {
-      fill: #ffffff;
-      stroke: none;
-    }
-    .pillar-card {
-      z-index: 2;
-      position: absolute;
-      width: 350px;
-      min-height: 230px;
-      padding: 28px;
-      text-align: left;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      border-radius: 12px;
-      overflow: hidden;
-      color: #fff;
-      box-shadow: 0 24px 60px rgba(15, 23, 42, 0.18);
-    }
-    .pillar-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-size: cover;
-      background-position: center;
-      z-index: 0;
-      filter: brightness(0.72) saturate(0.9);
-    }
-    .pillar-card::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(15,23,42,0.82), rgba(15,23,42,0.28));
-      z-index: 1;
-    }
-    .pillar-card > * {
-      position: relative;
-      z-index: 2;
-    }
-    .pillar-card.top-left::before {
-      background-image: url('pillar-01.jpg');
-    }
-    .pillar-card.top-right::before {
-      background-image: url('pillar-02.jpg');
-    }
-    .pillar-card.bottom-right::before {
-      background-image: url('pillar-03.jpg');
-    }
-    .pillar-card.bottom-left::before {
-      background-image: url('pillar-04.jpg');
-    }
-    .pillar-card.top-left {
-      left: 50px;
-      top: 40px;
-    }
-    .pillar-card.top-right {
-      right: 50px;
-      top: 40px;
-    }
-    .pillar-card.bottom-left {
-      left: 50px;
-      bottom: 40px;
-    }
-    .pillar-card.bottom-right {
-      right: 50px;
-      bottom: 40px;
-    }
-    .number {
-      color: #ffb703;
-      font-size: 34px;
-      font-weight: 900;
-      line-height: 1;
-      margin-bottom: 10px;
-    }
-    .label {
-      display: block;
-      color: rgba(255,255,255,0.7);
-      font-size: 11px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      margin-bottom: 4px;
-    }
-    .pillar-title {
-      font-size: 20px;
-      line-height: 1.12;
-      font-weight: 900;
-      text-transform: uppercase;
-      margin-bottom: 14px;
-    }
-    .pillar-text {
-      color: rgba(255,255,255,0.78);
-      font-size: 15px;
-      line-height: 1.5;
-    }
-    .cta-strategie {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 58px;
-      padding: 0 34px;
-      margin-top: 28px;
-      border-radius: 10px;
-      background: var(--accent);
-      color: var(--accent-foreground);
-      font-size: 16px;
-      font-weight: 700;
-      text-decoration: none;
-      letter-spacing: 0.03em;
-      box-shadow: 0 10px 25px rgba(255,184,0,0.3);
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    .cta-strategie:hover {
-      background: #e6a600;
-    }
-    @media (max-width: 980px) {
-      .system-graphic {
-        min-height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 22px;
-      }
-      .pillar-card {
-        position: relative;
-        left: auto !important;
-        right: auto !important;
-        top: auto !important;
-        bottom: auto !important;
-        transform: none;
-        width: min(100%, 520px);
-      }
-      .top-left { order: 1; }
-      .top-right { order: 2; }
-      .bottom-left { order: 3; }
-      .bottom-right { order: 4; }
-      .z-connector { display: none; }
-    }
-
-    /* ===================== SOCIAL PROOF ===================== */
-    .social-proof {
-      padding: 80px 0;
-      background: #ffffff;
-      color: #0a0a0a;
-    }
-
-    .social-proof-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    .social-headline {
-      text-align: center;
-      margin-bottom: 48px;
-    }
-
-    .social-headline h2 {
-      font-size: clamp(36px, 5vw, 60px);
-      font-weight: 800;
-      line-height: 1.05;
-      margin-bottom: 16px;
-    }
-
-    .social-headline .highlight {
-      color: var(--accent);
-    }
-
-    .social-headline p {
-      font-size: 18px;
-      color: #6b7280;
-    }
-
-    .testimonial-grid {
-      display: grid;
-      gap: 32px;
-      margin-bottom: 64px;
-    }
-
-    @media (min-width: 768px) {
-      .testimonial-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    .testimonial-card {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .testimonial-video {
-      aspect-ratio: 16 / 9;
-      background: #f0f0f0;
-      border-radius: 12px;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-    }
-
-    .testimonial-video .play-btn-sm {
-      width: 64px;
-      height: 64px;
-      background: rgba(255,184,0,0.15);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: background 0.2s;
-    }
-
-    .testimonial-video:hover .play-btn-sm {
-      background: rgba(255,184,0,0.25);
-    }
-
-    .testimonial-video .play-btn-sm::after {
-      content: '';
-      width: 0;
-      height: 0;
-      border-left: 14px solid var(--accent);
-      border-top: 10px solid transparent;
-      border-bottom: 10px solid transparent;
-      margin-left: 4px;
-    }
-
-    .testimonial-info h3 {
-      font-size: 18px;
-      font-weight: 700;
-      color: #111;
-    }
-
-    .testimonial-info .location {
-      font-size: 14px;
-      color: #777;
-      margin-bottom: 4px;
-    }
-
-    .testimonial-info .quote {
-      font-size: 14px;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    /* Carousel */
-    .carousel-section {
-      margin-bottom: 48px;
-    }
-
-    .carousel-title {
-      font-size: 24px;
-      font-weight: 700;
-      text-align: center;
-      margin-bottom: 24px;
-      color: #111;
-    }
-
-    .carousel-track {
-      display: flex;
-      gap: 24px;
-      overflow-x: auto;
-      padding-bottom: 16px;
-      scrollbar-width: none;
-      -ms-overflow-style: none;
-    }
-
-    .carousel-track::-webkit-scrollbar {
-      display: none;
-    }
-
-    .carousel-item {
-      flex-shrink: 0;
-      width: 224px;
-    }
-
-    .carousel-item-inner {
-      aspect-ratio: 9 / 16;
-      background: #f0f0f0;
-      border-radius: 12px;
-      overflow: hidden;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-    }
-
-    .carousel-item-inner .play-btn-xs {
-      width: 48px;
-      height: 48px;
-      background: rgba(255,184,0,0.15);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .carousel-item-inner .play-btn-xs::after {
-      content: '';
-      width: 0;
-      height: 0;
-      border-left: 10px solid var(--accent);
-      border-top: 7px solid transparent;
-      border-bottom: 7px solid transparent;
-      margin-left: 3px;
-    }
-
-    .carousel-item-label {
-      position: absolute;
-      bottom: 16px;
-      left: 16px;
-      right: 16px;
-      background: rgba(255,255,255,0.9);
-      padding: 8px 12px;
-      border-radius: 6px;
-      font-size: 14px;
-      font-weight: 600;
-      color: #111;
-    }
-
-    .swipe-hint {
-      text-align: center;
-      font-size: 12px;
-      color: #666;
-      margin-top: 12px;
-    }
-
-    /* ===================== ÜBER SEBASTIAN ===================== */
-    .about-section {
-      padding: 80px 0;
-      background: #fff;
-    }
-
-    .about-inner {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    .about-card {
-      background: var(--bg-dark);
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
-    }
-
-    .about-grid {
-      display: grid;
-    }
-
-    @media (min-width: 1024px) {
-      .about-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    .about-text {
-      padding: 48px;
-      color: #fff;
-    }
-
-    @media (min-width: 1024px) {
-      .about-text {
-        padding: 64px;
-      }
-    }
-
-    .about-text h2 {
-      font-size: clamp(32px, 4vw, 48px);
-      font-weight: 700;
-      margin-bottom: 16px;
-    }
-
-    .about-text h3 {
-      font-size: clamp(18px, 2vw, 24px);
-      color: var(--text-muted);
-      margin-bottom: 32px;
-    }
-
-    .about-text p {
-      font-size: 18px;
-      color: #d1d5db;
-      margin-bottom: 16px;
-      line-height: 1.7;
-    }
-
-    .about-image {
-      position: relative;
-      min-height: 400px;
-    }
-
-    .about-image img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .stats-row {
-      display: grid;
-      gap: 24px;
-      margin-top: 48px;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    @media (min-width: 768px) {
-      .stats-row {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    .stat-card {
-      text-align: center;
-      padding: 24px;
-      background: #f9fafb;
-      border-radius: 8px;
-      border: 1px solid #e5e7eb;
-    }
-
-    .stat-value {
-      font-size: clamp(32px, 4vw, 48px);
-      font-weight: 700;
-      color: var(--accent);
-    }
-
-    .stat-label {
-      font-size: 14px;
-      color: #6b7280;
-      margin-top: 8px;
-    }
-
-    /* ===================== ANGEBOT ===================== */
-    .angebot-section {
-      padding: 80px 0;
-      background: #f9fafb;
-    }
-
-    .angebot-inner {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    .angebot-header {
-      text-align: center;
-      margin-bottom: 64px;
-    }
-
-    .angebot-header h2 {
-      font-size: clamp(28px, 4vw, 48px);
-      font-weight: 700;
-      margin-bottom: 16px;
-    }
-
-    .angebot-header p {
-      font-size: 20px;
-      color: #4b5563;
-    }
-
-    .angebot-grid {
-      display: grid;
-      gap: 16px;
-    }
-
-    @media (min-width: 768px) {
-      .angebot-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    .angebot-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-      padding: 16px;
-      background: #fff;
-      border-radius: 8px;
-      border: 1px solid #e5e7eb;
-    }
-
-    .angebot-item svg {
-      width: 24px;
-      height: 24px;
-      color: var(--accent);
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    .angebot-item span {
-      font-size: 17px;
-      color: #0a0a0a;
-    }
-
-    .ergebnis-box {
-      margin-top: 48px;
-      padding: 32px;
-      background: rgba(255,184,0,0.1);
-      border: 2px solid var(--accent);
-      border-radius: 12px;
-      text-align: center;
-    }
-
-    .ergebnis-box h3 {
-      font-size: 24px;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-
-    .ergebnis-box p {
-      font-size: 18px;
-      color: #374151;
-    }
-
-    /* ===================== FAQ ===================== */
-    .faq-section {
-      padding: 80px 0;
-      background: #fff;
-    }
-
-    .faq-inner {
-      max-width: 768px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    .faq-header {
-      text-align: center;
-      margin-bottom: 64px;
-    }
-
-    .faq-header h2 {
-      font-size: clamp(28px, 4vw, 48px);
-      font-weight: 700;
-    }
-
-    .faq-list {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .faq-item {
-      border: 1px solid #e5e7eb;
-      border-radius: 8px;
-      overflow: hidden;
-      background: #f9fafb;
-    }
-
-    .faq-question {
-      width: 100%;
-      padding: 24px;
-      text-align: left;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: transparent;
-      border: none;
-      cursor: pointer;
-      font-size: 18px;
-      font-weight: 600;
-      color: #0a0a0a;
-      font-family: inherit;
-      transition: background 0.2s;
-    }
-
-    .faq-question:hover {
-      background: #f3f4f6;
-    }
-
-    .faq-chevron {
-      width: 20px;
-      height: 20px;
-      flex-shrink: 0;
-      transition: transform 0.3s;
-    }
-
-    .faq-item.open .faq-chevron {
-      transform: rotate(180deg);
-    }
-
-    .faq-answer {
-      display: none;
-      padding: 0 24px 24px;
-      background: #fff;
-    }
-
-    .faq-item.open .faq-answer {
-      display: block;
-    }
-
-    .faq-answer p {
-      color: #4b5563;
-      line-height: 1.7;
-    }
-
-    /* ===================== QUALIFIZIERUNG ===================== */
-    .qualify-section {
-      padding: 80px 0;
-      background: #f9fafb;
-    }
-
-    .qualify-inner {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    .qualify-card {
-      background: #fff;
-      padding: 48px;
-      border-radius: 12px;
-      border: 2px solid var(--accent);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    }
-
-    .qualify-card h2 {
-      font-size: clamp(24px, 3vw, 36px);
-      font-weight: 700;
-      text-align: center;
-      margin-bottom: 32px;
-    }
-
-    .qualify-card > p {
-      font-size: 18px;
-      color: #374151;
-      margin-bottom: 24px;
-    }
-
-    .qualify-list {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      margin-bottom: 32px;
-    }
-
-    .qualify-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-    }
-
-    .qualify-item svg {
-      width: 24px;
-      height: 24px;
-      color: var(--accent);
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    .qualify-item span {
-      font-size: 18px;
-      color: #374151;
-    }
-
-    .qualify-note {
-      background: rgba(255,184,0,0.1);
-      padding: 24px;
-      border-radius: 8px;
-      border: 1px solid rgba(255,184,0,0.2);
-    }
-
-    .qualify-note p {
-      font-size: 18px;
-      font-weight: 600;
-      color: #1f2937;
-      line-height: 1.6;
-    }
-
-    /* ===================== TRUSTPILOT ===================== */
-    .trustpilot-section {
-      padding: 80px 0;
-      background: #fff;
-    }
-
-    .trustpilot-inner {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    .trustpilot-header {
-      text-align: center;
-      margin-bottom: 48px;
-    }
-
-    .trustpilot-header h2 {
-      font-size: clamp(24px, 3vw, 36px);
-      font-weight: 700;
-      margin-bottom: 24px;
-    }
-
-    .trustpilot-stars-row {
-      display: flex;
-      justify-content: center;
-      gap: 8px;
-      margin-bottom: 12px;
-    }
-
-    .trustpilot-stars-row svg {
-      width: 32px;
-      height: 32px;
-      fill: var(--green-trust);
-    }
-
-    .trustpilot-header .rating-text {
-      color: #4b5563;
-      margin-bottom: 16px;
-    }
-
-    .trustpilot-header .tp-label {
-      font-size: 14px;
-      color: #6b7280;
-    }
-
-    .reviews-grid {
-      display: grid;
-      gap: 24px;
-      margin-bottom: 32px;
-    }
-
-    @media (min-width: 768px) {
-      .reviews-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (min-width: 1024px) {
-      .reviews-grid {
-        grid-template-columns: repeat(4, 1fr);
-      }
-    }
-
-    .review-card {
-      background: #fff;
-      padding: 24px;
-      border-radius: 8px;
-      border: 1px solid #e5e7eb;
-      transition: box-shadow 0.2s;
-    }
-
-    .review-card:hover {
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    }
-
-    .review-stars {
-      display: flex;
-      gap: 4px;
-      margin-bottom: 12px;
-    }
-
-    .review-stars svg {
-      width: 20px;
-      height: 20px;
-      fill: var(--green-trust);
-    }
-
-    .review-verified {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 12px;
-    }
-
-    .review-verified svg {
-      width: 16px;
-      height: 16px;
-      color: #16a34a;
-    }
-
-    .review-verified span {
-      font-size: 12px;
-      color: #6b7280;
-    }
-
-    .review-card h3 {
-      font-size: 14px;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-
-    .review-card .review-text {
-      font-size: 14px;
-      color: #4b5563;
-      margin-bottom: 12px;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-
-    .review-card .review-date {
-      font-size: 12px;
-      color: #9ca3af;
-    }
-
-    .review-card .review-link {
-      font-size: 12px;
-      color: #16a34a;
-      margin-top: 8px;
-      display: inline-block;
-    }
-
-    .review-card .review-link:hover {
-      text-decoration: underline;
-    }
-
-    /* ===================== FINAL CTA ===================== */
-    .final-cta {
-      padding: 80px 0;
-      background: var(--accent);
-      color: var(--accent-foreground);
-      text-align: center;
-    }
-
-    .final-cta-inner {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    .final-cta h2 {
-      font-size: clamp(28px, 4vw, 48px);
-      font-weight: 700;
-      margin-bottom: 24px;
-    }
-
-    .final-cta p {
-      font-size: 20px;
-      margin-bottom: 32px;
-      opacity: 0.9;
-    }
-
-    .btn-dark {
-      display: inline-flex;
-      padding: 16px 32px;
-      background: #0a0a0a;
-      color: #fff;
-      border-radius: 10px;
-      font-weight: 700;
-      font-size: 18px;
-      border: none;
-      cursor: pointer;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-      transition: background 0.2s;
-      margin-bottom: 24px;
-    }
-
-    .btn-dark:hover {
-      background: #1a1a1a;
-    }
-
-    .final-cta .limited {
-      font-size: 14px;
-      opacity: 0.75;
-    }
-
-    /* ===================== RESSOURCEN ===================== */
-    .resources-section {
-      padding: 80px 0;
-      background: var(--bg-dark);
-      color: #fff;
-    }
-
-    .resources-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    .resources-header {
-      text-align: center;
-      margin-bottom: 64px;
-    }
-
-    .resources-header h2 {
-      font-size: clamp(28px, 4vw, 48px);
-      font-weight: 700;
-    }
-
-    .resources-grid {
-      display: grid;
-      gap: 32px;
-    }
-
-    @media (min-width: 768px) {
-      .resources-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    .resource-card {
-      background: rgba(255,255,255,0.05);
-      backdrop-filter: blur(8px);
-      border-radius: 12px;
-      padding: 32px;
-      border: 1px solid rgba(255,255,255,0.1);
-      transition: border-color 0.2s;
-    }
-
-    .resource-card:hover {
-      border-color: var(--accent);
-    }
-
-    .resource-icon {
-      width: 64px;
-      height: 64px;
-      background: rgba(255,184,0,0.15);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 24px;
-    }
-
-    .resource-icon svg {
-      width: 32px;
-      height: 32px;
-      color: var(--accent);
-    }
-
-    .resource-card h3 {
-      font-size: 24px;
-      font-weight: 700;
-      margin-bottom: 12px;
-    }
-
-    .resource-card .subtitle {
-      font-size: 14px;
-      color: var(--text-muted);
-      margin-bottom: 8px;
-    }
-
-    .resource-card p {
-      color: #d1d5db;
-      margin-bottom: 24px;
-      line-height: 1.6;
-    }
-
-    .btn-outline {
-      display: inline-flex;
-      padding: 12px 24px;
-      border: 2px solid var(--accent);
-      color: var(--accent);
-      border-radius: 8px;
-      font-weight: 600;
-      background: transparent;
-      cursor: pointer;
-      transition: all 0.2s;
-      font-family: inherit;
-      font-size: 14px;
-    }
-
-    .btn-outline:hover {
-      background: var(--accent);
-      color: var(--accent-foreground);
-    }
-
-    /* ===================== NEWSLETTER ===================== */
-    .newsletter-section {
-      padding: 80px 0;
-      background: #fff;
-    }
-
-    .newsletter-inner {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    .newsletter-header {
-      text-align: center;
-      margin-bottom: 32px;
-    }
-
-    .newsletter-header h2 {
-      font-size: clamp(24px, 3vw, 36px);
-      font-weight: 700;
-      margin-bottom: 12px;
-      color: #0a0a0a;
-    }
-
-    .newsletter-header .accent {
-      color: var(--accent);
-    }
-
-    .newsletter-header p {
-      font-size: 18px;
-      color: #4b5563;
-    }
-
-    .newsletter-form {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .newsletter-inputs {
-      display: grid;
-      gap: 16px;
-    }
-
-    @media (min-width: 640px) {
-      .newsletter-inputs {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    .newsletter-input {
-      padding: 16px 24px;
-      background: #f9fafb;
-      border-radius: 8px;
-      border: 1px solid #e5e7eb;
-      font-size: 16px;
-      font-family: inherit;
-      color: #0a0a0a;
-      outline: none;
-      transition: border-color 0.2s;
-    }
-
-    .newsletter-input:focus {
-      border-color: var(--accent);
-    }
-
-    .newsletter-input::placeholder {
-      color: #9ca3af;
-    }
-
-    .newsletter-footer {
-      text-align: center;
-      margin-top: 24px;
-    }
-
-    .newsletter-footer p {
-      font-size: 14px;
-      color: #374151;
-      margin-bottom: 8px;
-    }
-
-    .newsletter-footer .small {
-      font-size: 12px;
-      color: #6b7280;
-    }
-
-    /* ===================== FOOTER ===================== */
-    .footer {
-      padding: 48px 0;
-      background: var(--bg-dark);
-      color: #fff;
-    }
-
-    .footer-inner {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    .footer-logo {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 32px;
-    }
-
-    .footer-logo-inner {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .footer-logo svg {
-      width: 40px;
-      height: 40px;
-      color: var(--accent);
-    }
-
-    .footer-logo .name {
-      font-weight: 700;
-      font-size: 20px;
-    }
-
-    .footer-logo .sub {
-      font-size: 12px;
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-    }
-
-    .footer-nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      gap: 16px;
-      margin-bottom: 32px;
-      font-size: 14px;
-    }
-
-    .footer-nav a {
-      color: var(--text-muted);
-      transition: color 0.2s;
-    }
-
-    .footer-nav a:hover {
-      color: var(--accent);
-    }
-
-    .footer-nav .sep {
-      color: #4b5563;
-    }
-
-    .footer-disclaimer {
-      text-align: center;
-      font-size: 12px;
-      color: #6b7280;
-      max-width: 800px;
-      margin: 0 auto;
-      line-height: 1.6;
-    }
-
-    /* ===================== SVG ICON HELPERS ===================== */
-    .icon-check {
-      fill: none;
-      stroke: currentColor;
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    .icon-star {
-      fill: currentColor;
-    }
-
-    /* Button universal centered */
-    .text-center {
-      text-align: center;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- ============ HEADER ============ -->
-  <header class="header">
-    <div class="header-inner">
-      <a href="#" class="logo">
-        <img src="logo-zander.png" alt="ZANDER by Sebastian Hänel" style="height:44px;width:auto;">
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-logo">
+        <img src="images/logo.png" alt="Dein Waller-Coach Logo">
       </a>
-
-      <nav class="nav">
-        <a href="#system">Das Zander System</a>
-        <a href="#ergebnisse">Ergebnisse</a>
-        <a href="#ueber-sebastian">Über Sebastian</a>
-        <a href="#ressourcen">Ressourcen</a>
-      </nav>
-
-      <button class="header-cta" onclick="document.getElementById('kontakt').scrollIntoView({behavior:'smooth'})">Erstgespräch buchen</button>
+      <div class="navbar-tagline">Das exklusive Premium-Coaching aus 18 Jahren Profi-Erfahrung.</div>
+      <div class="navbar-right">
+        <div class="navbar-links">
+          <a href="#testimonials">Ergebnisse</a>
+          <a href="#ueber">Über</a>
+          <a href="#ressourcen">Ressourcen</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <a href="termin-buchen.html" class="btn btn-green navbar-cta">Erstgespräch buchen</a>
+      </div>
+      <button class="menu-toggle" aria-label="Menü" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-  </header>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#testimonials" onclick="toggleMenu()">Ergebnisse</a>
+      <a href="#ueber" onclick="toggleMenu()">Über</a>
+      <a href="#ressourcen" onclick="toggleMenu()">Ressourcen</a>
+      <a href="#faq" onclick="toggleMenu()">FAQ</a>
+      <a href="termin-buchen.html" class="btn btn-green" style="text-align:center">Erstgespräch buchen</a>
+    </div>
+  </nav>
 
-  <!-- ============ HERO ============ -->
+  <!-- HERO -->
   <section class="hero">
-    <div class="hero-inner">
-      <div class="hero-text">
-        <p class="hero-eyebrow">Für Zanderangler, die endlich konstant fangen wollen</p>
-        <h1 class="hero-headline">Sicher im Zanderangeln werden.</h1>
-        <p class="hero-subline">Lerne, wie du regelmäßig und gezielt Zander fängst. Gewinne Sicherheit am Wasser, verstehe deinen Zielfisch und löse die Herausforderung.</p>
-      </div>
+    <div class="container">
+      <p class="subtitle" data-animate>FÜR WELSANGLER, DIE ENDLICH KONSTANT ERFOLG HABEN WOLLEN</p>
+      <h1 data-animate data-delay="1">Fange endlich regelmäßig große Welse – mit System statt Zufall.</h1>
+      <p class="hero-desc" data-animate data-delay="2">Lerne, wie du trotz wenig Zeit gezielt kapitale Welse fängst – ohne endloses Ausprobieren oder Frust am Wasser.</p>
 
-      <div class="hero-grid">
-        <!-- Video -->
-        <div>
-          <div class="video-placeholder">
-            <div class="play-btn"></div>
-          </div>
+      <div class="hero-content">
+        <div class="hero-video" data-animate="fade-left" data-delay="3">
+          <div id="vidalytics_embed_Ol3KAcvbLhewLPad" style="width:100%;position:relative;padding-top:56.25%;"></div>
+          <script type="text/javascript">
+          (function (v, i, d, a, l, y, t, c, s) {
+              y='_'+d.toLowerCase();c=d+'L';if(!v[d]){v[d]={};}if(!v[c]){v[c]={};}if(!v[y]){v[y]={};}var vl='Loader',vli=v[y][vl],vsl=v[c][vl + 'Script'],vlf=v[c][vl + 'Loaded'],ve='Embed';
+              if (!vsl){vsl=function(u,cb){
+                  if(t){cb();return;}s=i.createElement("script");s.type="text/javascript";s.async=1;s.src=u;
+                  if(s.readyState){s.onreadystatechange=function(){if(s.readyState==="loaded"||s.readyState=="complete"){s.onreadystatechange=null;vlf=1;cb();}};}else{s.onload=function(){vlf=1;cb();};}
+                  i.getElementsByTagName("head")[0].appendChild(s);
+              };}
+              vsl(l+'loader.min.js',function(){if(!vli){var vlc=v[c][vl];vli=new vlc();}vli.loadScript(l+'player.min.js',function(){var vec=v[d][ve];t=new vec();t.run(a);});});
+          })(window, document, 'Vidalytics', 'vidalytics_embed_Ol3KAcvbLhewLPad', 'https://fast.vidalytics.com/embeds/maLclYQQ/Ol3KAcvbLhewLPad/');
+          </script>
         </div>
-
-        <!-- Benefits + CTA -->
-        <div class="hero-benefits">
-          <div class="benefits-list">
-            <div class="benefit-item">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-check"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Sicherheit am Wasser gewinnen</span>
+        <div class="hero-right" data-animate="fade-right" data-delay="4">
+          <div class="hero-checks">
+            <div class="hero-check">
+              <div class="check-icon">
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              Klarer Plan statt Chaos
             </div>
-            <div class="benefit-item">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-check"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Zander wirklich verstehen</span>
+            <div class="hero-check">
+              <div class="check-icon">
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              Knacke deine Hausgewässer
             </div>
-            <div class="benefit-item">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-check"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Regelmäßig und gezielt fangen</span>
-            </div>
-            <div class="benefit-item">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-check"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Zander-Strategie erlernen</span>
-            </div>
-          </div>
-
-          <div class="hero-cta-wrap">
-            <button class="btn-primary" onclick="document.getElementById('kontakt').scrollIntoView({behavior:'smooth'})">Jetzt unverbindliches Erstgespräch buchen!</button>
-            <p class="hero-subtext">(Hunderte Angler zum Traumzander gebracht)</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Bekannt aus -->
-      <div class="bekannt-aus">
-        <div class="bekannt-label">Bekannt aus</div>
-        <div class="bekannt-logo"><img src="logo-fischundfang.png" alt="Fisch & Fang"></div>
-        <div class="bekannt-logo"><img src="logo-raubfisch.png" alt="Der Raubfisch"></div>
-        <div class="bekannt-logo"><img src="logo-mdr.png" alt="MDR"></div>
-        <div class="bekannt-logo"><img src="logo-zeckfishing.png" alt="Zeck Fishing"></div>
-        <!-- TrustBox widget - Mini -->
-        <div class="trustpilot-widget" data-locale="de-DE" data-template-id="53aa8807dec7e10d38f59f32" data-businessunit-id="649be946c113a6f5759992b9" data-style-height="150px" data-style-width="100%" data-token="0182406c-f81d-4d8c-b75b-5c3da658039e">
-          <a href="https://de.trustpilot.com/review/zandercoaching.de" target="_blank" rel="noopener">Trustpilot</a>
-        </div>
-        <!-- End TrustBox widget -->
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ PROBLEM AGITATION ============ -->
-  <section class="problem-section">
-    <div class="problem-inner">
-      <div class="section-badge">
-        <p>Kommt dir das bekannt vor?</p>
-      </div>
-
-      <h2 class="problem-headline">Du angelst stundenlang – und fängst keinen Zander?</h2>
-      <p class="problem-subline">Du bist nicht allein. Viele Angler erleben genau diese Frustration.</p>
-
-      <div class="problem-cards">
-        <div class="problem-card">
-          <div class="problem-card-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          </div>
-          <h3>„Ich finde kaum Zeit zum Angeln"</h3>
-          <p>Zwischen Job, Familie und Verpflichtungen sind deine Stunden am Wasser selten – und genau dann willst du, dass es sich auch lohnt.</p>
-        </div>
-
-        <div class="problem-card">
-          <div class="problem-card-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
-          </div>
-          <h3>„Ich weiß nie, ob Spot oder Köder stimmt"</h3>
-          <p>Du probierst herum, wechselst Spots, Köder und Techniken – aber ohne klares System bleibt alles ein Glücksspiel.</p>
-        </div>
-
-        <div class="problem-card">
-          <div class="problem-card-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-          </div>
-          <h3>„Eigentlich liebe ich das Angeln… aber der Frust wird größer"</h3>
-          <p>Du genießt die Natur, die Ruhe, das Abschalten – doch wenn du immer wieder ohne Fang nach Hause gehst, bleibt der Frust.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Es ist nicht deine Schuld -->
-    <div class="schuld-section">
-      <div class="schuld-grid">
-        <div>
-          <div class="schuld-callout">
-            <p class="bold-title">Zanderangeln ist kein Zufall.</p>
-            <p>Es folgt bestimmten Mustern, Abläufen und Entscheidungen,<br>die man lernen und verstehen kann.</p>
-            <p>Viele Angler probieren viel aus:<br>andere Spots, neue Köder, andere Techniken –<br>doch ohne klares System bleibt es oft ein Rätsel.</p>
-            <p>Und genau das führt zu dem Gefühl am Wasser:<br><span class="italic">nicht genau zu wissen, was jetzt wirklich richtig ist.</span></p>
-
-            <div class="schuld-bullets">
-              <p><span class="dot">•</span> <span>Bleibe ich hier oder wechsle ich den Spot?</span></p>
-              <p><span class="dot">•</span> <span>Ist es der falsche Köder – oder die falsche Führung?</span></p>
-              <p><span class="dot">•</span> <span>Liegt es an der Uhrzeit, am Wasser oder an mir?</span></p>
-            </div>
-
-            <p style="font-weight:600;">Was fehlt, ist keine Motivation.<br>Was fehlt, ist Sicherheit im Handeln.</p>
-
-            <div class="schuld-divider">
-              <p style="font-weight:700;font-size:18px;color:#0a0a0a;margin-bottom:12px;">Und genau das kannst du lernen.</p>
-              <p>Mit einem klaren System verstehst du,<br><span class="accent-text">warum Zander wann, wo und wie beißen.</span></p>
-              <p>Du hörst auf, planlos auszuprobieren –<br>und beginnst, gezielt Entscheidungen zu treffen.</p>
-              <p>So nutzt du deine Zeit am Wasser effektiv<br>und entwickelst Schritt für Schritt die Sicherheit,<br>die erfolgreiche Zanderangler auszeichnet.</p>
+            <div class="hero-check">
+              <div class="check-icon">
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              Mehr Erfolg bei weniger Zeitaufwand
             </div>
           </div>
-
-          <div class="schuld-cta">
-            <button class="btn-primary-dark" onclick="document.getElementById('kontakt').scrollIntoView({behavior:'smooth'})">Jetzt unverbindliches Erstgespräch buchen!</button>
-          </div>
-        </div>
-
-        <div class="schuld-image">
-          <img src="sebastian-zander.jpg" alt="Sebastian Hänel - Zander-Experte">
-          <p class="caption">Sebastian Hänel - Gründer Zander Coaching</p>
+          <a href="termin-buchen.html" class="btn btn-green btn-full">Kostenloses Erstgespräch sichern</a>
+          <p class="hero-social-proof">Bereits hunderten Anglern dabei geholfen, konstant große Welse zu fangen.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ ZANDER STRATEGIE (provided code) ============ -->
-  <section id="system" class="process-section">
-    <div class="process-container">
-      <div class="eyebrow">Die Zander Strategie</div>
-      <h2 class="headline">So gehen wir gemeinsam vor.</h2>
-      <p class="subline">
-        Ein klarer Ablauf, mit dem ich dich Schritt für Schritt zu mehr Sicherheit und konstanten Erfolgen beim Zanderangeln führe.
-      </p>
-      <div class="system-graphic">
-        <div class="z-connector">
-          <svg viewBox="0 0 427 266" preserveAspectRatio="xMidYMid meet">
-            <path d="M0 0 L0 52 L195 53 L11 265 L426 264 L426 0 L380 0 L241 160 L310 160 L373 87 L373 213 L126 212 L309 0 Z"/>
-          </svg>
+  <!-- PAIN POINTS -->
+  <section class="pain-points section" id="ergebnisse">
+    <div class="container">
+      <h2 class="text-center" data-animate>Kommt dir das bekannt vor?</h2>
+      <div class="pain-grid">
+        <div class="pain-card" data-animate data-delay="1">
+          <div class="pain-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+          </div>
+          <span>Du bist oft am Wasser – aber die richtig großen Welse bleiben aus</span>
         </div>
-        <article class="pillar-card top-left">
-          <div class="number">01</div>
-          <span class="label">Säule</span>
-          <h3 class="pillar-title">Ich analysiere deine Ausgangssituation</h3>
-          <p class="pillar-text">
-            Ich schaue mir dein Tackle, deine Gewässer und deine verfügbare Zeit genau an. So entsteht eine Strategie, die wirklich zu deinem Alltag passt.
-          </p>
-        </article>
-        <article class="pillar-card top-right">
-          <div class="number">02</div>
-          <span class="label">Säule</span>
-          <h3 class="pillar-title">Ich zeige dir Zander & Gewässer</h3>
-          <p class="pillar-text">
-            Du lernst, wie Zander ticken, welche Muster sie verfolgen und wie du deine Hausgewässer richtig liest – statt nur zu raten.
-          </p>
-        </article>
-        <article class="pillar-card bottom-right">
-          <div class="number">04</div>
-          <span class="label">Säule</span>
-          <h3 class="pillar-title">Ich analysiere & vertiefe dein System</h3>
-          <p class="pillar-text">
-            Wir werten deine Ergebnisse aus, optimieren deine Entscheidungen und vertiefen das Gelernte dauerhaft für mehr Sicherheit beim Zanderangeln.
-          </p>
-        </article>
-        <article class="pillar-card bottom-left">
-          <div class="number">03</div>
-          <span class="label">Säule</span>
-          <h3 class="pillar-title">Ich begleite dich bei der Umsetzung</h3>
-          <p class="pillar-text">
-            Du setzt die erarbeiteten Strategien am Wasser um – mit klaren Abläufen, direkter Anleitung und persönlicher Betreuung.
-          </p>
-        </article>
+        <div class="pain-card" data-animate data-delay="2">
+          <div class="pain-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1 4v6h6"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+          </div>
+          <span>Du hast schon vieles ausprobiert, aber nichts funktioniert dauerhaft</span>
+        </div>
+        <div class="pain-card" data-animate data-delay="3">
+          <div class="pain-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <span>Es gibt zu viele Meinungen und Methoden – dir fehlt ein klarer Weg</span>
+        </div>
+        <div class="row-2">
+          <div class="pain-card" data-animate data-delay="4">
+            <div class="pain-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <span>Deine Zeit ist begrenzt und du kannst nicht ständig testen</span>
+          </div>
+          <div class="pain-card" data-animate data-delay="5">
+            <div class="pain-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+            </div>
+            <span>Du willst endlich konstant Erfolg – nicht nur Glückstreffer</span>
+          </div>
+        </div>
       </div>
-      <a href="#kontakt" class="cta-strategie">TERMIN VEREINBAREN →</a>
     </div>
   </section>
 
-  <!-- ============ SOCIAL PROOF ============ -->
-  <section id="ergebnisse" class="social-proof">
-    <div class="social-proof-inner">
-      <div class="social-headline">
-        <h2>VORHER FRUST.<br>NACHHER <span class="highlight">STRATEGIE.</span></h2>
-        <p>Echte Stimmen aus dem Coaching – echte Erfahrungen am Wasser.</p>
+  <!-- SOLUTION / BENEFITS -->
+  <section class="section">
+    <div class="container">
+      <h2 class="text-center" data-animate>Der klare Weg zu deinem konstanten Fangerfolg</h2>
+      <p class="section-desc text-center" data-animate data-delay="1">Im Coaching zeige ich dir einen strukturierten, erprobten Ansatz, mit dem du genau verstehst, wann, wo und wie du große Welse fängst – angepasst an dein Gewässer und deine verfügbare Zeit.</p>
+      <div class="benefits-grid">
+        <div class="benefit-card" data-animate data-delay="1">
+          <div class="check-icon">
+            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h4>Individuelle Strategie für dein Gewässer</h4>
+        </div>
+        <div class="benefit-card" data-animate data-delay="2">
+          <div class="check-icon">
+            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h4>Klare Schritt-für-Schritt Anleitung</h4>
+        </div>
+        <div class="benefit-card" data-animate data-delay="3">
+          <div class="check-icon">
+            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h4>Fokus auf große Fische statt Zufallstreffer</h4>
+        </div>
+        <div class="benefit-card" data-animate data-delay="4">
+          <div class="check-icon">
+            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h4>Maximale Ergebnisse bei minimalem Zeitaufwand</h4>
+        </div>
       </div>
+    </div>
+  </section>
 
-      <div class="testimonial-grid">
+  <!-- CTA DARK -->
+  <section class="cta-dark-section">
+    <div class="cta-dark-wrapper">
+      <div class="cta-dark-left" data-animate="fade-left">
+        <div class="cta-dark-photo-card">
+          <img src="images/benjamin-wels.jpg" alt="Benjamin Gründer mit kapitalem Wels">
+        </div>
+      </div>
+      <div class="cta-dark-right" data-animate="fade-right" data-delay="2">
+        <h2>Du willst endlich konstant Welse fangen, statt jedes Mal aufs Neue zu rätseln, was funktioniert?</h2>
+        <p>Dann lerne uns in einem unverbindlichen Erstgespräch kennen.</p>
+        <p class="cta-dark-label">Gemeinsam schauen wir uns an:</p>
+        <ul class="cta-dark-list">
+          <li>wo du aktuell stehst</li>
+          <li>welche Fehler dich ausbremsen</li>
+          <li>und wie du mit einem klaren Plan deine Zeit am Wasser endlich effektiv nutzt</li>
+        </ul>
+        <a href="termin-buchen.html" class="btn btn-green">Jetzt unverbindliches Erstgespräch buchen!</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section" id="testimonials">
+    <div class="container">
+      <h2 class="text-center" data-animate>Was meine Kunden sagen</h2>
+      <div class="testimonials-grid" data-animate>
         <div class="testimonial-card">
-          <div class="testimonial-video"><div class="play-btn-sm"></div></div>
-          <div class="testimonial-info">
-            <h3>Markus T.</h3>
-            <p class="location">Rhein / Buhnenfelder</p>
-            <p class="quote">Vorher planlos unterwegs und selten Fischkontakt. Heute klare Entscheidungen am Wasser und regelmäßig Zander.</p>
+          <div class="testimonial-video">
+            <iframe src="https://player.mediadelivery.net/embed/642765/b319c19a-9b8b-4246-b46f-85ade2428061?autoplay=false&loop=false&muted=false&preload=true&responsive=true" loading="lazy" style="border:0;position:absolute;top:0;left:0;width:100%;height:100%;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
+          </div>
+          <div class="testimonial-text-area">
+            <div class="testimonial-info">
+              <h4 class="testimonial-name">Marco</h4>
+              <p class="testimonial-location">Elbe</p>
+            </div>
+            <div class="testimonial-quote">"Alleine hat es bei mir einfach nicht funktioniert – ich habe viel ausprobiert, aber ohne Plan. Erst durch die Unterstützung und den strukturierten Ansatz im Coaching wurde das Ganze planbar – und plötzlich habe ich die Fische auch gefangen."</div>
           </div>
         </div>
-
         <div class="testimonial-card">
-          <div class="testimonial-video"><div class="play-btn-sm"></div></div>
-          <div class="testimonial-info">
-            <h3>Thomas S.</h3>
-            <p class="location">Main / Steinpackungen</p>
-            <p class="quote">Früher ständig gewechselt zwischen Spots und Ködern. Jetzt verstehe ich das System und fange konstant.</p>
+          <div class="testimonial-video">
+            <iframe src="https://player.mediadelivery.net/embed/642765/42de381a-7ac0-4891-af00-7edbfb29dbb6?autoplay=false&loop=false&muted=false&preload=true&responsive=true" loading="lazy" style="border:0;position:absolute;top:0;left:0;width:100%;height:100%;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
+          </div>
+          <div class="testimonial-text-area">
+            <div class="testimonial-info">
+              <h4 class="testimonial-name">Markus</h4>
+              <p class="testimonial-location">Österreich</p>
+            </div>
+            <div class="testimonial-quote">"Am Anfang war es extrem schwer, die Situationen am Wasser richtig einzuschätzen. Durch das Coaching habe ich gelernt, wo die Fische stehen und wie ich gezielt angel – seitdem fange ich jedes Jahr deutlich mehr und bessere Fische."</div>
           </div>
         </div>
-
         <div class="testimonial-card">
-          <div class="testimonial-video"><div class="play-btn-sm"></div></div>
-          <div class="testimonial-info">
-            <h3>Patrick M.</h3>
-            <p class="location">Elbe / Buhnen & Kanten</p>
-            <p class="quote">Hatte keine Ahnung, wo ich anfangen soll. Nach dem Coaching weiß ich genau, wie ich vorgehe – und es funktioniert.</p>
+          <div class="testimonial-video">
+            <iframe src="https://player.mediadelivery.net/embed/642765/3e5151e5-2a8e-44a1-a5f5-1a953058f859?autoplay=false&loop=false&muted=false&preload=true&responsive=true" loading="lazy" style="border:0;position:absolute;top:0;left:0;width:100%;height:100%;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
           </div>
-        </div>
-
-        <div class="testimonial-card">
-          <div class="testimonial-video"><div class="play-btn-sm"></div></div>
-          <div class="testimonial-info">
-            <h3>Michael K.</h3>
-            <p class="location">Weser / Hafen & Spundwände</p>
-            <p class="quote">Von 2-3 Zandern im Jahr zu regelmäßigen Fängen. Das Coaching hat mir die Sicherheit gegeben, die mir gefehlt hat.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Carousel -->
-      <div class="carousel-section">
-        <h3 class="carousel-title">MEHR STIMMEN ↓</h3>
-        <div class="carousel-track">
-          <div class="carousel-item"><div class="carousel-item-inner"><div class="play-btn-xs"></div><div class="carousel-item-label">Angler #1</div></div></div>
-          <div class="carousel-item"><div class="carousel-item-inner"><div class="play-btn-xs"></div><div class="carousel-item-label">Angler #2</div></div></div>
-          <div class="carousel-item"><div class="carousel-item-inner"><div class="play-btn-xs"></div><div class="carousel-item-label">Angler #3</div></div></div>
-          <div class="carousel-item"><div class="carousel-item-inner"><div class="play-btn-xs"></div><div class="carousel-item-label">Angler #4</div></div></div>
-          <div class="carousel-item"><div class="carousel-item-inner"><div class="play-btn-xs"></div><div class="carousel-item-label">Angler #5</div></div></div>
-          <div class="carousel-item"><div class="carousel-item-inner"><div class="play-btn-xs"></div><div class="carousel-item-label">Angler #6</div></div></div>
-          <div class="carousel-item"><div class="carousel-item-inner"><div class="play-btn-xs"></div><div class="carousel-item-label">Angler #7</div></div></div>
-          <div class="carousel-item"><div class="carousel-item-inner"><div class="play-btn-xs"></div><div class="carousel-item-label">Angler #8</div></div></div>
-        </div>
-        <p class="swipe-hint">← SWIPE →</p>
-      </div>
-
-      <div class="text-center">
-        <button class="btn-primary" onclick="document.getElementById('kontakt').scrollIntoView({behavior:'smooth'})" style="width:auto;">TERMIN VEREINBAREN →</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ ÜBER SEBASTIAN ============ -->
-  <section id="ueber-sebastian" class="about-section">
-    <div class="about-inner">
-      <div class="about-card">
-        <div class="about-grid">
-          <div class="about-text">
-            <h2>Sebastian Hänel</h2>
-            <h3>Zander-Experte, Coach & Autor</h3>
-            <p>Angeln, besonders auf Zander ist seit über 20 Jahren seine größte Leidenschaft. In dieser Zeit hat er mehr Kilometer zurückgelegt als LKW Fahrer und gefühlt an allen Gewässern in Deutschland geangelt. Angetrieben davon, ein tiefes Verständnis für den Zander zu bekommen, hat er seine Fähigkeiten und sein Gespür immer weiter entwickelt.</p>
-            <p>Seit 2004 ist Sebastian bekannt als Redaktionsmitglied bei "Fisch und Fang" und "Der Raubfisch", so wie durch unzählige Messeauftritte und Vorträge.</p>
-            <p>Seit Jahren gibt er seine Expertise in Videos und Coachings weiter und hilft Anglern, den Zander zu verstehen, um ihn sicher und regelmäßig zu fangen.</p>
-          </div>
-          <div class="about-image">
-            <img src="sebastian-about.jpg" alt="Sebastian beim Angeln">
-          </div>
-        </div>
-      </div>
-
-      <div class="stats-row">
-        <div class="stat-card">
-          <div class="stat-value">20+</div>
-          <div class="stat-label">Jahre Erfahrung</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-value">500+</div>
-          <div class="stat-label">Coachings</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-value">100+</div>
-          <div class="stat-label">Gewässer</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ ANGEBOT ============ -->
-  <section class="angebot-section">
-    <div class="angebot-inner">
-      <div class="angebot-header">
-        <h2>Was du im 1:1 Coaching bekommst</h2>
-        <p>Individuelles Coaching, zugeschnitten auf dich und dein Gewässer</p>
-      </div>
-
-      <div class="angebot-grid">
-        <div class="angebot-item">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-check"><polyline points="20 6 9 17 4 12"/></svg>
-          <span>Individuelle Gewässeranalyse für deine Spots</span>
-        </div>
-        <div class="angebot-item">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-check"><polyline points="20 6 9 17 4 12"/></svg>
-          <span>Persönliche Zander-Strategie basierend auf deinem Gewässer</span>
-        </div>
-        <div class="angebot-item">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-check"><polyline points="20 6 9 17 4 12"/></svg>
-          <span>Köderwahl und Präsentationstechniken</span>
-        </div>
-        <div class="angebot-item">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-check"><polyline points="20 6 9 17 4 12"/></svg>
-          <span>Timing und saisonale Muster verstehen</span>
-        </div>
-        <div class="angebot-item">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-check"><polyline points="20 6 9 17 4 12"/></svg>
-          <span>Spotanalyse und Strukturerkennung</span>
-        </div>
-        <div class="angebot-item">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-check"><polyline points="20 6 9 17 4 12"/></svg>
-          <span>Langfristige Begleitung und Erfolgskontrolle</span>
-        </div>
-        <div class="angebot-item">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-check"><polyline points="20 6 9 17 4 12"/></svg>
-          <span>Direkter Zugang zu Sebastian</span>
-        </div>
-        <div class="angebot-item">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-check"><polyline points="20 6 9 17 4 12"/></svg>
-          <span>Lebenslanger Zugriff auf alle Materialien</span>
-        </div>
-      </div>
-
-      <div class="ergebnis-box">
-        <h3>Ergebnis</h3>
-        <p>Du gehst mit Sicherheit und einem klaren Plan ans Wasser und fängst regelmäßig Zander – nicht durch Zufall, sondern durch Verständnis.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ FAQ ============ -->
-  <section class="faq-section">
-    <div class="faq-inner">
-      <div class="faq-header">
-        <h2>Häufige Fragen</h2>
-      </div>
-
-      <div class="faq-list">
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)">
-            <span>Funktioniert das bei meinem Gewässer?</span>
-            <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer">
-            <p>Ja! Das System ist auf alle Gewässertypen anwendbar. Wir passen die Strategie individuell an dein Gewässer an – egal ob Fluss, See, Kanal oder Stausee.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)">
-            <span>Wie viel Zeit brauche ich?</span>
-            <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer">
-            <p>Das Coaching ist so konzipiert, dass es in deinen Alltag passt. Die meisten Teilnehmer investieren 1-2 Stunden pro Woche für die Umsetzung – zusätzlich zu ihren normalen Angelausflügen.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)">
-            <span>Was kostet das Coaching?</span>
-            <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer">
-            <p>Die Investition hängt vom individuellen Coaching-Umfang ab. Im kostenlosen Vorgespräch besprechen wir deine Situation und ich mache dir ein transparentes Angebot.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)">
-            <span>Bin ich als Anfänger geeignet?</span>
-            <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer">
-            <p>Das Coaching ist sowohl für Einsteiger als auch Fortgeschrittene geeignet. Wichtig ist nur, dass du ernsthaft Zander fangen möchtest und bereit bist, das Gelernte umzusetzen.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)">
-            <span>Wie lange dauert das Coaching?</span>
-            <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer">
-            <p>Die Coaching-Dauer richtet sich nach deinen Zielen. Typischerweise arbeiten wir 3-6 Monate zusammen, mit regelmäßigen Check-ins und individueller Betreuung.</p>
+          <div class="testimonial-text-area">
+            <div class="testimonial-info">
+              <h4 class="testimonial-name">Felix</h4>
+              <p class="testimonial-location"></p>
+            </div>
+            <div class="testimonial-quote">"Am Fluss habe ich mich anfangs komplett verloren gefühlt. Durch Bennis Unterstützung habe ich endlich verstanden, worauf es wirklich ankommt – und konnte das direkt umsetzen. Ohne ihn wären wir nicht erfolgreich gewesen."</div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ QUALIFIZIERUNG ============ -->
-  <section class="qualify-section">
-    <div class="qualify-inner">
-      <div class="qualify-card">
-        <h2>Wichtig: Das Coaching ist nicht für jeden</h2>
-        <p>Ich arbeite nur mit Anglern, die es ernst meinen. Das bedeutet:</p>
-        <div class="qualify-list">
-          <div class="qualify-item">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-check"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>Du bist bereit, in deine Fähigkeiten zu investieren</span>
+  <!-- COACHING PROCESS -->
+  <section class="steps section-gray" id="ablauf">
+    <div class="container">
+      <h2 class="text-center" data-animate>So läuft dein Coaching ab</h2>
+      <div class="steps-container">
+        <div class="step" data-animate data-delay="1">
+          <div class="step-content">
+            <h3>Kostenloses Erstgespräch</h3>
+            <p>Wir analysieren deine aktuelle Situation und deine Ziele.</p>
           </div>
-          <div class="qualify-item">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-check"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>Du willst echte Ergebnisse, keine Quick-Fixes</span>
-          </div>
-          <div class="qualify-item">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-check"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>Du bist motiviert, das Gelernte umzusetzen</span>
-          </div>
-          <div class="qualify-item">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-check"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>Du hast die Zeit, regelmäßig ans Wasser zu gehen</span>
+          <div class="step-number">1</div>
+          <div class="step-spacer"></div>
+        </div>
+        <div class="step" data-animate data-delay="2">
+          <div class="step-spacer"></div>
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>Individueller Plan</h3>
+            <p>Du bekommst eine klare Strategie für dein Gewässer.</p>
           </div>
         </div>
-        <div class="qualify-note">
-          <p>Wenn du nur nach kostenlosen Tipps suchst oder nicht bereit bist, Zeit und Geld zu investieren, ist dieses Coaching nichts für dich. Für alle anderen: Lass uns reden!</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ TRUSTPILOT ============ -->
-  <section class="trustpilot-section">
-    <div class="trustpilot-inner">
-      <!-- TrustBox widget - Grid -->
-      <div class="trustpilot-widget" data-locale="de-DE" data-template-id="539adbd6dec7e10e686debee" data-businessunit-id="649be946c113a6f5759992b9" data-style-height="500px" data-style-width="100%" data-token="d16d6ce2-9bb5-444f-b18c-dd3835314286" data-stars="1,2,3,4,5" data-review-languages="de">
-        <a href="https://de.trustpilot.com/review/zandercoaching.de" target="_blank" rel="noopener">Trustpilot</a>
-      </div>
-      <!-- End TrustBox widget -->
-
-      <!-- Fallback reviews (hidden when TrustBox loads) -->
-      <div class="reviews-grid" style="display:none;">
-        <div class="review-card">
-          <div class="review-stars">
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <div class="step" data-animate data-delay="3">
+          <div class="step-content">
+            <h3>Umsetzung & Ergebnisse</h3>
+            <p>Du setzt die Strategie um und erzielst messbare Erfolge.</p>
           </div>
-          <div class="review-verified">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-check"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>Verifiziert</span>
-          </div>
-          <h3>Zandercoaching online- geht voll klar</h3>
-          <p class="review-text">Zandercoaching online, ohne Praxis vor Ort - geht das? Mit Sebastian als Coach ganz klar - Ja! Wir haben zusammen...</p>
-          <p class="review-date">vor 3 Wochen</p>
-          <a href="#" class="review-link">Erfahren Sie mehr</a>
-        </div>
-
-        <div class="review-card">
-          <div class="review-stars">
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          </div>
-          <div class="review-verified">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-check"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>Verifiziert</span>
-          </div>
-          <h3>Ich war zu Beginn ehrlich gesagt...</h3>
-          <p class="review-text">Ich war zu Beginn ehrlich gesagt skeptisch, ob ein Online Coaching wirklich funktioniert. Aber Sebastian hat...</p>
-          <p class="review-date">vor 4 Tagen</p>
-          <a href="#" class="review-link">Erfahren Sie mehr</a>
-        </div>
-
-        <div class="review-card">
-          <div class="review-stars">
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          </div>
-          <div class="review-verified">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-check"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>Verifiziert</span>
-          </div>
-          <h3>Zandercoaching</h3>
-          <p class="review-text">Ich hab über das Zander Coaching die wichtigsten Tipps bekommen. Kann ich nur weiterempfehlen...</p>
-          <p class="review-date">vor 2 Wochen</p>
-          <a href="#" class="review-link">Erfahren Sie mehr</a>
-        </div>
-
-        <div class="review-card">
-          <div class="review-stars">
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          </div>
-          <div class="review-verified">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-check"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>Verifiziert</span>
-          </div>
-          <h3>Tolles Coaching</h3>
-          <p class="review-text">Tolles Coaching direkt auf den Punkt gebracht. Die Gewässeranalyse war genau das, was ich...</p>
-          <p class="review-date">vor 1 Woche</p>
-          <a href="#" class="review-link">Erfahren Sie mehr</a>
-        </div>
-
-        <div class="review-card">
-          <div class="review-stars">
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          </div>
-          <div class="review-verified">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-check"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>Verifiziert</span>
-          </div>
-          <h3>Christian Ferchmann, 4. Januar</h3>
-          <p class="review-text">Das Coaching war für mich sehr wertvoll. Endlich verstehe ich die Zusammenhänge...</p>
-          <p class="review-date">vor 5 Wochen</p>
-          <a href="#" class="review-link">Erfahren Sie mehr</a>
-        </div>
-
-        <div class="review-card">
-          <div class="review-stars">
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          </div>
-          <div class="review-verified">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-check"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>Verifiziert</span>
-          </div>
-          <h3>Alexander P, 11. November</h3>
-          <p class="review-text">Coaching erhalten und bereits - perfekt für alle, die neu anfangen oder ihr Wissen auffrischen...</p>
-          <p class="review-date">vor 6 Wochen</p>
-          <a href="#" class="review-link">Erfahren Sie mehr</a>
-        </div>
-
-        <div class="review-card">
-          <div class="review-stars">
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          </div>
-          <div class="review-verified">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-check"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>Verifiziert</span>
-          </div>
-          <h3>Tobi, 23. Oktober</h3>
-          <p class="review-text">Zanderangeln auf allen Ebenen durch das Coaching verstanden. Kann ich nur empfehlen...</p>
-          <p class="review-date">vor 8 Wochen</p>
-          <a href="#" class="review-link">Erfahren Sie mehr</a>
-        </div>
-
-        <div class="review-card">
-          <div class="review-stars">
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          </div>
-          <div class="review-verified">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-check"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>Verifiziert</span>
-          </div>
-          <h3>Johannes, 23. Oktober</h3>
-          <p class="review-text">Klare Strukturen und größeres Selbstvertrauen durch das Coaching gewonnen. Top!...</p>
-          <p class="review-date">vor 8 Wochen</p>
-          <a href="#" class="review-link">Erfahren Sie mehr</a>
+          <div class="step-number">3</div>
+          <div class="step-spacer"></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ FINAL CTA ============ -->
-  <section id="kontakt" class="final-cta">
-    <div class="final-cta-inner">
-      <h2>Bereit, regelmäßig Zander zu fangen?</h2>
-      <p>Buche jetzt dein kostenloses Erstgespräch und finde heraus, wie du deine Zander-Erfolge systematisch steigern kannst.</p>
-      <button class="btn-dark">Kostenloses Erstgespräch buchen</button>
-      <p class="limited">Limitierte Plätze – Nur 5 neue Coachees pro Monat</p>
+  <!-- ABOUT -->
+  <section class="section about-section" id="ueber">
+    <div class="container">
+      <h2 class="text-center" data-animate>Über Benjamin Gründer</h2>
+      <div class="about-card" data-animate="scale" data-delay="1">
+        <div class="about-card-text">
+          <h3>Benjamin Gründer</h3>
+          <p class="about-role">Welsangler, Coach & Experte</p>
+          <p>Benjamin Gründer ist passionierter Welsangler mit <strong>18 Jahren Erfahrung als professioneller Guide</strong> an den verschiedensten Gewässern Deutschlands und Europas. Seine Mission ist es, Anglern dabei zu helfen, gezielt und konstant kapitale Welse zu fangen – ohne jahrelanges Herumprobieren.</p>
+          <p>Als <strong>Autor des tausendfach verkauften Bestsellers „Wallerangeln – Fänge planbar machen"</strong> hat er sein Wissen bereits erfolgreich weitergegeben. Er hat sich darauf spezialisiert, die wirklich wichtigen Erfolgsfaktoren beim Welsangeln herauszufiltern und in klare, sofort anwendbare Strategien zu übersetzen.</p>
+          <p>Seine Expertise geht über klassisches Guiding hinaus: Als <strong>Entwickler der Angelwetter-App</strong> kombiniert er technisches und analytisches Verständnis mit jahrzehntelanger Praxiserfahrung. Dabei arbeitet er persönlich mit jedem Kunden zusammen, um individuelle Lösungen für spezifische Gewässer und Zielsituationen zu entwickeln.</p>
+          <p>Seine Methode basiert auf erprobten Techniken aus 18 Jahren professionellem Guiding, die messbare Ergebnisse liefern. Benjamin entwickelt seine Strategien kontinuierlich weiter und testet neue Ansätze selbst am Wasser, bevor er sie an seine Kunden weitergibt.</p>
+        </div>
+        <div class="about-card-image">
+          <img src="images/benjamin-portrait.jpg" alt="Benjamin Gründer mit kapitalem Wels">
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ============ RESSOURCEN ============ -->
-  <section id="ressourcen" class="resources-section">
-    <div class="resources-inner">
-      <div class="resources-header">
-        <h2>Weitere Ressourcen für deinen Erfolg</h2>
-      </div>
-
+  <!-- RESOURCES -->
+  <section class="section-dark section" id="ressourcen">
+    <div class="container">
+      <h2 class="text-center" data-animate>Weitere Ressourcen für deinen Erfolg</h2>
       <div class="resources-grid">
-        <div class="resource-card">
+        <div class="resource-card" data-animate data-delay="1">
           <div class="resource-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2" fill="none" stroke="white" stroke-width="2"/><line x1="12" y1="19" x2="12" y2="23" stroke="white" stroke-width="2"/></svg>
           </div>
-          <h3>Zander-Podcast</h3>
-          <p class="subtitle">Der Zander-Angel-Podcast</p>
-          <p>Wöchentlich neue Tipps, Strategien und Erfahrungen rund ums Zanderangeln. Neue Folgen erscheinen mit Wissenswerten, die du direkt am Wasser umsetzen kannst.</p>
-          <button class="btn-outline">Jetzt anhören →</button>
+          <h3>Waller-Flüsterer</h3>
+          <p class="resource-sub">Der Welsangler-Podcast</p>
+          <p>Höre dir kostenlos wertvolle Tipps, Strategien und Erfahrungen rund ums Welsangeln an. Neue Folgen regelmäßig mit praxisnahen Insights direkt vom Wasser.</p>
+          <a href="https://open.spotify.com/show/5pQNnB6Xkw57KLVyMkm3Vy" target="_blank" rel="noopener" class="resource-link">Jetzt anhören <span class="arrow">→</span></a>
         </div>
-
-        <div class="resource-card">
+        <div class="resource-card" data-animate data-delay="2">
           <div class="resource-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21" fill="white"/></svg>
           </div>
           <h3>YouTube Kanal</h3>
-          <p class="subtitle">Zander Praxisvideos</p>
-          <p>Praxisvideos, Tutorials und Live-Sessions vom Wasser. Lerne visuell echte Fang-Situationen und bekomme Techniken im Detail erklärt.</p>
-          <button class="btn-outline">Kanal besuchen →</button>
+          <p class="resource-sub">Crafty Fisherman</p>
+          <p>Praxisvideos, Tutorials und Live-Sessions vom Wasser. Lerne visuell durch echte Fang-Situationen und bewährte Techniken in Aktion.</p>
+          <a href="https://www.youtube.com/@CraftyFisherman_Official" target="_blank" rel="noopener" class="resource-link">Kanal besuchen <span class="arrow">→</span></a>
         </div>
-
-        <div class="resource-card">
+        <div class="resource-card" data-animate data-delay="3">
           <div class="resource-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 12c.94-3.46 4.94-6 8.5-6 3.56 0 6.06 2.54 7 6"/><path d="M18 19c-2.8 0-5.4-1-7.5-3"/><path d="M14 15c-2 2-4 3-7 3s-5-2-5-5c0-2 1.5-4 3.5-5"/><path d="M2 9l1.4 1.4"/><circle cx="16.5" cy="9.5" r="1"/></svg>
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="white" stroke-width="2"/><path d="M12 6v6l4 2" fill="none" stroke="white" stroke-width="2"/></svg>
           </div>
-          <h3>Zeck Fishing Shop</h3>
-          <p class="subtitle">Das perfekte Zander-Tackle</p>
-          <p>Die ultimative Angelshop für dein Tackle. Rods und weitere Premium-Ausrüstung für erfolgreiches Zanderangeln – speziell ausgewählt.</p>
-          <button class="btn-outline">App entdecken →</button>
+          <h3>Angelwetter</h3>
+          <p class="resource-sub">Dein perfekter Angelbegleiter</p>
+          <p>Die ultimative Angel-App mit detaillierten Wetterdaten, Mondphasen, Solunar-Zeiten und vielem mehr. Plane deine Sessions optimal und erhöhe deine Fangchancen.</p>
+          <a href="http://www.angelwetter.net" target="_blank" rel="noopener" class="resource-link">App entdecken <span class="arrow">→</span></a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ NEWSLETTER ============ -->
-  <section class="newsletter-section">
-    <div class="newsletter-inner">
-      <div class="newsletter-header">
-        <h2>Kostenloser Newsletter für <span class="accent">Zanderangler</span></h2>
-        <p>Erhalte regelmäßig wertvolle Inhalte, Updates und Einblicke – direkt in dein Postfach.</p>
-      </div>
+  <!-- GREEN CTA -->
+  <section class="section-green cta-green">
+    <div class="container">
+      <h2 data-animate>Überzeuge dich selbst – ganz unverbindlich</h2>
+      <p data-animate data-delay="1">In einem kostenlosen Gespräch schauen wir uns gemeinsam deine Situation an und zeigen dir, wie du gezielt große Welse fangen kannst.</p>
+      <a href="termin-buchen.html" class="btn btn-outline" data-animate="scale" data-delay="2">Jetzt kostenloses Erstgespräch buchen <span class="arrow">→</span></a>
+    </div>
+  </section>
 
-      <form class="newsletter-form" onsubmit="event.preventDefault();">
+  <!-- FAQ -->
+  <section class="faq section" id="faq">
+    <div class="container">
+      <h2 class="text-center" data-animate>Häufige Fragen</h2>
+      <div class="faq-list" data-animate data-delay="1">
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Wie viel Zeit muss ich investieren?
+            <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Das Coaching ist speziell für Angler mit wenig Zeit aufgebaut. Du lernst, effizienter zu angeln und bessere Ergebnisse zu erzielen.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Brauche ich Vorerfahrung?
+            <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Nein. Egal ob Einsteiger oder erfahrener Angler – du bekommst eine klare Struktur.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Funktioniert das an jedem Gewässer?
+            <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Ja, die Strategien werden individuell auf dein Gewässer angepasst.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Was kostet das Coaching?
+            <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Die Preise lassen sich nicht pauschal festlegen, da sie sich individuell nach deinen Zielen, deiner aktuellen Ausgangssituation und deinen persönlichen Wünschen richten. Auch die Dauer der Zusammenarbeit spielt dabei eine entscheidende Rolle.</p>
+            <p>Wenn du Interesse an einer Zusammenarbeit hast, kannst du dir ganz unkompliziert einen kostenlosen und unverbindlichen Termin buchen. In diesem Gespräch analysieren wir deine Situation und erstellen anschließend ein maßgeschneidertes Angebot für dich.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="section-dark final-cta">
+    <div class="container">
+      <h2 data-animate>Sichere dir jetzt deinen Platz</h2>
+      <p data-animate data-delay="1">Aufgrund hoher Nachfrage sind die Plätze begrenzt.</p>
+      <a href="termin-buchen.html" class="btn btn-green" data-animate="scale" data-delay="2">Jetzt Termin sichern <span class="arrow">→</span></a>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter" data-animate>
+    <div class="container text-center">
+      <h2>Kostenloser Newsletter für Wallerangler</h2>
+      <p class="newsletter-sub">Erhalte regelmäßig wertvolle Inhalte, Updates und Einblicke – direkt in dein Postfach.</p>
+      <form class="newsletter-form" id="newsletter-form" method="POST" action="https://1a15b29e.sibforms.com/serve/MUIFAI7dIkGOzjIfvZ3ET3GGJSzOKiWB5yIu3MnWh0LWhEMZKzkTOjG0wIs985mm3Uywb9eXaSEgf0tfPVz6Gb1F5cxw96VCmTF1gFPi4dmlnclp4mMDnQuV09TcT3f_21ugMoNkZGXtqJOB-aDFzv_6vJMXo1rTVCPgdfaV21tqUyo46n9F2p0moEDO6wh-fSznYprwBhffv62xmg==" target="brevo-iframe">
         <div class="newsletter-inputs">
-          <input type="text" class="newsletter-input" placeholder="Vorname">
-          <input type="email" class="newsletter-input" placeholder="Deine E-Mail-Adresse...">
+          <input type="text" name="VORNAME" placeholder="Vorname" required class="newsletter-input">
+          <input type="email" name="EMAIL" placeholder="Deine E-Mail-Adresse..." required class="newsletter-input">
         </div>
-        <button type="submit" class="btn-primary">Jetzt anmelden</button>
+        <button type="submit" class="newsletter-btn" id="newsletter-submit-btn">Jetzt anmelden</button>
+        <input type="text" name="email_address_check" value="" style="display:none!important;position:absolute;left:-9999px;">
+        <input type="hidden" name="locale" value="de">
       </form>
-
-      <div class="newsletter-footer">
-        <p>Schließe dich tausenden Zanderanglern an</p>
-        <p class="small">Du erhältst eine Bestätigungs-E-Mail, um deine Anmeldung zu verifizieren.</p>
-      </div>
+      <iframe name="brevo-iframe" style="display:none!important;width:0;height:0;border:0;"></iframe>
+      <p class="newsletter-cta-text">Schließe dich hunderten Welsanglern an</p>
+      <p class="newsletter-disclaimer">Double Opt-in: Du erhältst eine Bestätigungs-E-Mail, um deine Anmeldung zu verifizieren.</p>
     </div>
   </section>
 
-  <!-- ============ FOOTER ============ -->
+  <!-- FOOTER -->
   <footer class="footer">
-    <div class="footer-inner">
+    <div class="container">
       <div class="footer-logo">
-        <img src="logo-zander.png" alt="ZANDER by Sebastian Hänel" style="height:60px;width:auto;">
+        <img src="images/logo.png" alt="Dein Waller-Coach Logo">
       </div>
-
-      <div class="footer-nav">
-        <a href="#impressum">Impressum</a>
-        <span class="sep">|</span>
-        <a href="#datenschutz">Datenschutz</a>
-        <span class="sep">|</span>
-        <a href="#haftungsausschluss">Haftungsausschluss</a>
-        <span class="sep">|</span>
-        <a href="#agb">AGB</a>
-        <span class="sep">|</span>
-        <a href="#cookie">Cookie-Einstellungen</a>
+      <div class="footer-links">
+        <a href="rechtliches.html#impressum">Impressum</a>
+        <span>|</span>
+        <a href="rechtliches.html#datenschutz">Datenschutz</a>
+        <span>|</span>
+        <a href="rechtliches.html#haftung">Haftungsausschluss</a>
+        <span>|</span>
+        <a href="rechtliches.html#agb">AGB</a>
+        <span>|</span>
+        <a href="#" onclick="event.preventDefault(); openCookieSettings();">Cookie-Einstellungen</a>
       </div>
-
-      <div class="footer-disclaimer">
-        <p>This site is not a part of the Facebook TM website or Facebook TM Inc. Additionally, this site is NOT endorsed by Facebook TM in any way. FACEBOOK TM is a trademark of FACEBOOK TM.</p>
-      </div>
+      <p class="footer-disclaimer">This site is not a part of the Facebook TM website or Facebook TM Inc. Additionally, this site is NOT endorsed by Facebook TM in any way. FACEBOOK TM is a trademark of FACEBOOK TM.</p>
     </div>
   </footer>
 
+  <script src="cookie-consent.js"></script>
   <script>
-    function toggleFaq(button) {
-      const item = button.closest('.faq-item');
-      const isOpen = item.classList.contains('open');
-
-      // Close all
-      document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('open'));
-
-      // Toggle current
-      if (!isOpen) {
-        item.classList.add('open');
-      }
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('active');
     }
+
+    function toggleFaq(btn) {
+      const item = btn.parentElement;
+      const wasActive = item.classList.contains('active');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+      if (!wasActive) item.classList.add('active');
+    }
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Scroll animations with IntersectionObserver
+    const animatedElements = document.querySelectorAll('[data-animate]');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.15,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    animatedElements.forEach(el => observer.observe(el));
+
   </script>
+
+  <!-- Brevo Newsletter Integration -->
+  <script>
+    (function() {
+      var form = document.getElementById('newsletter-form');
+      var submitBtn = document.getElementById('newsletter-submit-btn');
+
+      form.addEventListener('submit', function() {
+        // Honeypot check
+        if (form.email_address_check.value) { event.preventDefault(); return; }
+
+        // The form submits normally into the hidden iframe (target="brevo-iframe")
+        // We just change the button text and redirect after a short delay
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Wird gesendet...';
+
+        setTimeout(function() {
+          window.location.href = 'https://wallercoaching.de/fast-geschafft';
+        }, 2000);
+      });
+    })();
+  </script>
+
 </body>
 </html>
