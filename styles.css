@@ -1048,86 +1048,105 @@ p { color: var(--gray-600); }
 /* ========================================
    NEWSLETTER
    ======================================== */
+/* ========================================
+   NEWSLETTER – Conversion Hero
+   ======================================== */
 .newsletter {
-  padding: 80px 0;
-  background: linear-gradient(135deg, #0a2e12 0%, #143d1c 50%, #0d3316 100%);
+  padding: 100px 0;
   position: relative;
   overflow: hidden;
+  background: #000;
 }
 
-.newsletter::before {
-  content: '';
+.newsletter-bg {
   position: absolute;
-  top: -50%;
-  left: -20%;
-  width: 60%;
-  height: 200%;
-  background: radial-gradient(ellipse, rgba(45, 140, 60, 0.12) 0%, transparent 70%);
-  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
 }
 
-.newsletter::after {
-  content: '';
+.newsletter-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+.newsletter-overlay {
   position: absolute;
-  bottom: -30%;
-  right: -10%;
-  width: 50%;
-  height: 160%;
-  background: radial-gradient(ellipse, rgba(52, 168, 83, 0.08) 0%, transparent 70%);
-  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    105deg,
+    rgba(0, 0, 0, 0.88) 0%,
+    rgba(0, 0, 0, 0.75) 40%,
+    rgba(0, 0, 0, 0.35) 70%,
+    rgba(0, 0, 0, 0.15) 100%
+  );
+  z-index: 1;
+}
+
+.newsletter-layout {
+  position: relative;
+  z-index: 2;
+  max-width: 580px;
+}
+
+.newsletter-content {
+  text-align: left;
 }
 
 .newsletter h2 {
   color: var(--white);
-  max-width: 700px;
-  margin: 0 auto 16px;
-  position: relative;
-  z-index: 1;
+  margin: 0 0 12px;
+  font-size: 2rem;
 }
 
 .newsletter-sub {
-  color: rgba(255, 255, 255, 0.7) !important;
+  color: rgba(255, 255, 255, 0.75) !important;
   font-size: 1.05rem;
-  margin-bottom: 40px;
-  position: relative;
-  z-index: 1;
+  margin-bottom: 32px;
+  line-height: 1.6;
 }
 
 .newsletter-form {
-  max-width: 700px;
-  margin: 0 auto;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .newsletter-inputs {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-bottom: 16px;
+  gap: 14px;
+  margin-bottom: 14px;
 }
 
 .newsletter-input {
   padding: 18px 24px;
   border-radius: 50px;
-  border: 1px solid rgba(45, 140, 60, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   font-size: 1rem;
   font-family: var(--font-main);
   outline: none;
-  background: rgba(255, 255, 255, 0.07);
+  background: rgba(255, 255, 255, 0.1);
   color: var(--white);
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   transition: all 0.2s;
 }
 
 .newsletter-input::placeholder {
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .newsletter-input:focus {
   border-color: var(--green);
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 0 3px rgba(45, 140, 60, 0.25);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 0 3px rgba(45, 140, 60, 0.3);
 }
 
 .newsletter-btn {
@@ -1142,34 +1161,62 @@ p { color: var(--gray-600); }
   color: var(--white);
   cursor: pointer;
   transition: all 0.2s;
+  letter-spacing: 0.02em;
 }
 
 .newsletter-btn:hover {
   background: var(--green-hover);
   transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(45, 140, 60, 0.4);
+  box-shadow: 0 8px 24px rgba(45, 140, 60, 0.45);
 }
 
 .newsletter-cta-text {
-  margin-top: 24px;
+  margin-top: 20px;
   font-weight: 700;
   color: var(--green-light) !important;
   font-size: 1rem;
-  position: relative;
-  z-index: 1;
 }
 
 .newsletter-disclaimer {
-  margin-top: 8px;
+  margin-top: 6px;
   font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.45) !important;
-  position: relative;
-  z-index: 1;
+}
+
+@media (max-width: 900px) {
+  .newsletter {
+    padding: 80px 0;
+  }
+
+  .newsletter-layout {
+    max-width: 100%;
+  }
+
+  .newsletter-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0.6) 50%,
+      rgba(0, 0, 0, 0.4) 100%
+    );
+  }
+
+  .newsletter-content {
+    text-align: center;
+  }
 }
 
 @media (max-width: 600px) {
+  .newsletter {
+    padding: 60px 0;
+  }
+
   .newsletter-inputs {
     grid-template-columns: 1fr;
+  }
+
+  .newsletter h2 {
+    font-size: 1.6rem;
   }
 }
 

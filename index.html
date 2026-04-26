@@ -396,21 +396,29 @@
 
   <!-- NEWSLETTER -->
   <section class="newsletter" data-animate>
-    <div class="container text-center">
-      <h2>Kostenloser Newsletter für Wallerangler</h2>
-      <p class="newsletter-sub">Erhalte regelmäßig wertvolle Inhalte, Updates und Einblicke – direkt in dein Postfach.</p>
-      <form class="newsletter-form" id="newsletter-form" method="POST" action="https://1a15b29e.sibforms.com/serve/MUIFAI7dIkGOzjIfvZ3ET3GGJSzOKiWB5yIu3MnWh0LWhEMZKzkTOjG0wIs985mm3Uywb9eXaSEgf0tfPVz6Gb1F5cxw96VCmTF1gFPi4dmlnclp4mMDnQuV09TcT3f_21ugMoNkZGXtqJOB-aDFzv_6vJMXo1rTVCPgdfaV21tqUyo46n9F2p0moEDO6wh-fSznYprwBhffv62xmg==" target="brevo-iframe">
-        <div class="newsletter-inputs">
-          <input type="text" name="VORNAME" placeholder="Vorname" required class="newsletter-input">
-          <input type="email" name="EMAIL" placeholder="Deine E-Mail-Adresse..." required class="newsletter-input">
+    <div class="newsletter-bg">
+      <img src="images/newsletter-bg.jpg" alt="Benjamin Gründer mit kapitaler Wels" loading="lazy">
+    </div>
+    <div class="newsletter-overlay"></div>
+    <div class="container">
+      <div class="newsletter-layout">
+        <div class="newsletter-content">
+          <h2>Kostenloser Newsletter für Wallerangler</h2>
+          <p class="newsletter-sub">Erhalte regelmäßig wertvolle Inhalte, Updates und Einblicke – direkt in dein Postfach.</p>
+          <form class="newsletter-form" id="newsletter-form" method="POST" action="https://1a15b29e.sibforms.com/serve/MUIFAI7dIkGOzjIfvZ3ET3GGJSzOKiWB5yIu3MnWh0LWhEMZKzkTOjG0wIs985mm3Uywb9eXaSEgf0tfPVz6Gb1F5cxw96VCmTF1gFPi4dmlnclp4mMDnQuV09TcT3f_21ugMoNkZGXtqJOB-aDFzv_6vJMXo1rTVCPgdfaV21tqUyo46n9F2p0moEDO6wh-fSznYprwBhffv62xmg==" target="brevo-iframe">
+            <div class="newsletter-inputs">
+              <input type="text" name="VORNAME" placeholder="Vorname" required class="newsletter-input">
+              <input type="email" name="EMAIL" placeholder="Deine E-Mail-Adresse..." required class="newsletter-input">
+            </div>
+            <button type="submit" class="newsletter-btn" id="newsletter-submit-btn">Jetzt anmelden</button>
+            <input type="text" name="email_address_check" value="" style="display:none!important;position:absolute;left:-9999px;">
+            <input type="hidden" name="locale" value="de">
+          </form>
+          <iframe name="brevo-iframe" style="display:none!important;width:0;height:0;border:0;"></iframe>
+          <p class="newsletter-cta-text">Schließe dich hunderten Welsanglern an</p>
+          <p class="newsletter-disclaimer">Double Opt-in: Du erhältst eine Bestätigungs-E-Mail, um deine Anmeldung zu verifizieren.</p>
         </div>
-        <button type="submit" class="newsletter-btn" id="newsletter-submit-btn">Jetzt anmelden</button>
-        <input type="text" name="email_address_check" value="" style="display:none!important;position:absolute;left:-9999px;">
-        <input type="hidden" name="locale" value="de">
-      </form>
-      <iframe name="brevo-iframe" style="display:none!important;width:0;height:0;border:0;"></iframe>
-      <p class="newsletter-cta-text">Schließe dich hunderten Welsanglern an</p>
-      <p class="newsletter-disclaimer">Double Opt-in: Du erhältst eine Bestätigungs-E-Mail, um deine Anmeldung zu verifizieren.</p>
+      </div>
     </div>
   </section>
 
