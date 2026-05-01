@@ -812,7 +812,7 @@ p { color: var(--gray-600); }
 
 .about-card {
   display: grid;
-  grid-template-columns: 55% 45%;
+  grid-template-columns: 1fr 1fr;
   margin-top: 48px;
   border-radius: 20px;
   overflow: hidden;
@@ -821,14 +821,14 @@ p { color: var(--gray-600); }
 
 .about-card-text {
   background: var(--dark);
-  padding: 48px 40px;
+  padding: 40px 36px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .about-card-text h3 {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   margin-bottom: 4px;
   color: var(--white);
 }
@@ -836,15 +836,15 @@ p { color: var(--gray-600); }
 .about-role {
   color: var(--green-light) !important;
   font-weight: 600;
-  font-size: 0.95rem;
-  margin-bottom: 20px !important;
+  font-size: 0.9rem;
+  margin-bottom: 16px !important;
   font-style: italic;
 }
 
 .about-card-text p {
-  margin-bottom: 14px;
-  font-size: 0.92rem;
-  line-height: 1.7;
+  margin-bottom: 12px;
+  font-size: 0.88rem;
+  line-height: 1.65;
   color: var(--gray-300);
 }
 
