@@ -821,7 +821,7 @@ p { color: var(--gray-600); }
 
 .about-card-text {
   background: var(--dark);
-  padding: 40px 36px;
+  padding: 36px 36px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -854,12 +854,14 @@ p { color: var(--gray-600); }
 
 .about-card-image {
   overflow: hidden;
+  max-height: 520px;
 }
 
 .about-card-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 10%;
   display: block;
 }
 
