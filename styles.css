@@ -854,7 +854,7 @@ p { color: var(--gray-600); }
 
 .about-card-image {
   overflow: hidden;
-  max-height: 520px;
+  min-height: 100%;
 }
 
 .about-card-image img {
